@@ -2,8 +2,6 @@
 
 ## Membuat 5 Persamaan dan 5 Variabel
 
-# Eliminasi Gauss
-
 ## Matriks Awal
 
 $$
