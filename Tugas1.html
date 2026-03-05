@@ -352,7 +352,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -368,6 +370,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-5-persamaan-dan-5-variabel">Membuat 5 Persamaan dan 5 Variabel</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -379,80 +389,80 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-eliminasi-gaussian">
 <h1>Tugas Eliminasi Gaussian<a class="headerlink" href="#tugas-eliminasi-gaussian" title="Link to this heading">#</a></h1>
-<p>Membuat 5 Persamaan dan 5 Variabel</p>
+<section id="membuat-5-persamaan-dan-5-variabel">
+<h2>Membuat 5 Persamaan dan 5 Variabel<a class="headerlink" href="#membuat-5-persamaan-dan-5-variabel" title="Link to this heading">#</a></h2>
 <p>Matriks awal:</p>
-<p><br />
-\begin{bmatrix}
-1&amp;2&amp;0&amp;0&amp;0&amp;5\
-0&amp;1&amp;3&amp;0&amp;0&amp;11\
-0&amp;0&amp;1&amp;4&amp;0&amp;19\
-0&amp;0&amp;0&amp;1&amp;5&amp;29\
-1&amp;0&amp;1&amp;0&amp;0&amp;4
-\end{bmatrix}</p>
+<p></p>
+<div class="bmatrix docutils">
+<p>1&amp;2&amp;0&amp;0&amp;0&amp;5<br />
+0&amp;1&amp;3&amp;0&amp;0&amp;11<br />
+0&amp;0&amp;1&amp;4&amp;0&amp;19<br />
+0&amp;0&amp;0&amp;1&amp;5&amp;29<br />
+1&amp;0&amp;1&amp;0&amp;0&amp;4</p>
+</div>
 <p>Langkah 1: Hilangkan angka 1 di bawah pivot pertama (kolom 1)</p>
 <p><span class="math notranslate nohighlight">\(R_5 \leftarrow R_5 - R_1\)</span></p>
-<p><br />
-\begin{bmatrix}
-1&amp;2&amp;0&amp;0&amp;0&amp;5\
-0&amp;1&amp;3&amp;0&amp;0&amp;11\
-0&amp;0&amp;1&amp;4&amp;0&amp;19\
-0&amp;0&amp;0&amp;1&amp;5&amp;29\
-0&amp;-2&amp;1&amp;0&amp;0&amp;-1
-\end{bmatrix}</p>
+<p></p>
+<div class="bmatrix docutils">
+<p>1&amp;2&amp;0&amp;0&amp;0&amp;5<br />
+0&amp;1&amp;3&amp;0&amp;0&amp;11<br />
+0&amp;0&amp;1&amp;4&amp;0&amp;19<br />
+0&amp;0&amp;0&amp;1&amp;5&amp;29<br />
+0&amp;-2&amp;1&amp;0&amp;0&amp;-1</p>
+</div>
 <p>Langkah 2: Hilangkan -2 di kolom 2 baris 5</p>
 <p><span class="math notranslate nohighlight">\(R_5 \leftarrow R_5 + 2R_2\)</span></p>
-<p><br />
-\begin{bmatrix}
-1&amp;2&amp;0&amp;0&amp;0&amp;5\
-0&amp;1&amp;3&amp;0&amp;0&amp;11\
-0&amp;0&amp;1&amp;4&amp;0&amp;19\
-0&amp;0&amp;0&amp;1&amp;5&amp;29\
-0&amp;0&amp;7&amp;0&amp;0&amp;21
-\end{bmatrix}</p>
+<p></p>
+<div class="bmatrix docutils">
+<p>1&amp;2&amp;0&amp;0&amp;0&amp;5<br />
+0&amp;1&amp;3&amp;0&amp;0&amp;11<br />
+0&amp;0&amp;1&amp;4&amp;0&amp;19<br />
+0&amp;0&amp;0&amp;1&amp;5&amp;29<br />
+0&amp;0&amp;7&amp;0&amp;0&amp;21</p>
+</div>
 <p>Langkah 3: Hilangkan 7 di kolom 3 baris 5</p>
 <p><span class="math notranslate nohighlight">\(R_5 \leftarrow R_5 - 7R_3\)</span></p>
-<p><br />
-\begin{bmatrix}
-1&amp;2&amp;0&amp;0&amp;0&amp;5\
-0&amp;1&amp;3&amp;0&amp;0&amp;11\
-0&amp;0&amp;1&amp;4&amp;0&amp;19\
-0&amp;0&amp;0&amp;1&amp;5&amp;29\
-0&amp;0&amp;0&amp;-28&amp;0&amp;-112
-\end{bmatrix}</p>
+<p></p>
+<div class="bmatrix docutils">
+<p>1&amp;2&amp;0&amp;0&amp;0&amp;5<br />
+0&amp;1&amp;3&amp;0&amp;0&amp;11<br />
+0&amp;0&amp;1&amp;4&amp;0&amp;19<br />
+0&amp;0&amp;0&amp;1&amp;5&amp;29<br />
+0&amp;0&amp;0&amp;-28&amp;0&amp;-112</p>
+</div>
 <p>Langkah 4: Hilangkan -28 di kolom 4 baris 5</p>
 <p><span class="math notranslate nohighlight">\(R_5 \leftarrow R_5 + 28R_4\)</span></p>
-<p><br />
-\begin{bmatrix}
-1&amp;2&amp;0&amp;0&amp;0&amp;5\
-0&amp;1&amp;3&amp;0&amp;0&amp;11\
-0&amp;0&amp;1&amp;4&amp;0&amp;19\
-0&amp;0&amp;0&amp;1&amp;5&amp;29\
-0&amp;0&amp;0&amp;0&amp;140&amp;700
-\end{bmatrix}</p>
+<p></p>
+<div class="bmatrix docutils">
+<p>1&amp;2&amp;0&amp;0&amp;0&amp;5<br />
+0&amp;1&amp;3&amp;0&amp;0&amp;11<br />
+0&amp;0&amp;1&amp;4&amp;0&amp;19<br />
+0&amp;0&amp;0&amp;1&amp;5&amp;29<br />
+0&amp;0&amp;0&amp;0&amp;140&amp;700</p>
+</div>
 <p>Langkah 5: Buat pivot jadi 1</p>
 <p><span class="math notranslate nohighlight">\(R_5 \leftarrow \frac{1}{140}R_5\)</span></p>
-<p><br />
-\begin{bmatrix}
-1&amp;2&amp;0&amp;0&amp;0&amp;5\
-0&amp;1&amp;3&amp;0&amp;0&amp;11\
-0&amp;0&amp;1&amp;4&amp;0&amp;19\
-0&amp;0&amp;0&amp;1&amp;5&amp;29\
-0&amp;0&amp;0&amp;0&amp;1&amp;5
-\end{bmatrix}</p>
+<p></p>
+<div class="bmatrix docutils">
+<p>1&amp;2&amp;0&amp;0&amp;0&amp;5<br />
+0&amp;1&amp;3&amp;0&amp;0&amp;11<br />
+0&amp;0&amp;1&amp;4&amp;0&amp;19<br />
+0&amp;0&amp;0&amp;1&amp;5&amp;29<br />
+0&amp;0&amp;0&amp;0&amp;1&amp;5</p>
+</div>
 <p>Lanjutkan eliminasi ke atas hingga diperoleh:</p>
-<p><br />
-\begin{bmatrix}
-1&amp;0&amp;0&amp;0&amp;0&amp;1\
-0&amp;1&amp;0&amp;0&amp;0&amp;2\
-0&amp;0&amp;1&amp;0&amp;0&amp;3\
-0&amp;0&amp;0&amp;1&amp;0&amp;4\
-0&amp;0&amp;0&amp;0&amp;1&amp;5
-\end{bmatrix}</p>
+<p></p>
+<div class="bmatrix docutils">
+<p>1&amp;0&amp;0&amp;0&amp;0&amp;1<br />
+0&amp;1&amp;0&amp;0&amp;0&amp;2<br />
+0&amp;0&amp;1&amp;0&amp;0&amp;3<br />
+0&amp;0&amp;0&amp;1&amp;0&amp;4<br />
+0&amp;0&amp;0&amp;0&amp;1&amp;5</p>
+</div>
 <p>Sehingga solusi sistem adalah:</p>
 <div class="math notranslate nohighlight">
-\[
-(x_1,x_2,x_3,x_4,x_5) = (1,2,3,4,5)
-\]</div>
+\[(x_1,x_2,x_3,x_4,x_5) = (1,2,3,4,5)\]</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -509,6 +519,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-5-persamaan-dan-5-variabel">Membuat 5 Persamaan dan 5 Variabel</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
