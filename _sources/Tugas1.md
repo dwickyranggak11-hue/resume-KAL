@@ -4,6 +4,18 @@
 
 ## Matriks Awal
 
+## Matriks Awal
+
+$$
+\begin{bmatrix}
+1&2&0&0&0&5\\
+0&1&3&0&0&11\\
+0&0&1&4&0&19\\
+0&0&0&1&5&29\\
+1&0&1&0&0&4
+\end{bmatrix}
+$$
+
 ### Langkah 1 
 Hilangkan elemen pada kolom 1 baris 5
 
