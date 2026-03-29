@@ -378,15 +378,17 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-5-persamaan-dan-5-variabel">Membuat 5 Persamaan dan 5 Variabel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-awal">Matriks Awal</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1">Langkah 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2">Langkah 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3">Langkah 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4">Langkah 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5">Langkah 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-6">Langkah 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-7">Langkah 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-8">Langkah 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-9">Langkah 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-10">Langkah 10</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2">Langkah 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3">Langkah 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4">Langkah 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5">Langkah 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-6">Langkah 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-7">Langkah 7</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir">Hasil Akhir</a></li>
 </ul>
             </nav>
         </div>
@@ -405,20 +407,9 @@ document.write(`
 </section>
 <section id="matriks-awal">
 <h2>Matriks Awal<a class="headerlink" href="#matriks-awal" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1&amp;2&amp;0&amp;0&amp;0&amp;5\\
-0&amp;1&amp;3&amp;0&amp;0&amp;11\\
-0&amp;0&amp;1&amp;4&amp;0&amp;19\\
-0&amp;0&amp;0&amp;1&amp;5&amp;29\\
-1&amp;0&amp;1&amp;0&amp;0&amp;4
-\end{bmatrix}
-\end{split}\]</div>
-<hr class="docutils" />
 <section id="langkah-1">
 <h3>Langkah 1<a class="headerlink" href="#langkah-1" title="Link to this heading">#</a></h3>
-<p>Hilangkan 1 di kolom 1 baris 5</p>
+<p>Hilangkan elemen pada kolom 1 baris 5</p>
 <div class="math notranslate nohighlight">
 \[
 R_5 \leftarrow R_5 - R_1
@@ -434,11 +425,10 @@ R_5 \leftarrow R_5 - R_1
 \end{bmatrix}
 \end{split}\]</div>
 </section>
-</section>
 <hr class="docutils" />
 <section id="langkah-2">
-<h2>Langkah 2<a class="headerlink" href="#langkah-2" title="Link to this heading">#</a></h2>
-<p>Hilangkan -2 di kolom 2 baris 5</p>
+<h3>Langkah 2<a class="headerlink" href="#langkah-2" title="Link to this heading">#</a></h3>
+<p>Hilangkan elemen pada kolom 2 baris 5</p>
 <div class="math notranslate nohighlight">
 \[
 R_5 \leftarrow R_5 + 2R_2
@@ -456,11 +446,11 @@ R_5 \leftarrow R_5 + 2R_2
 </section>
 <hr class="docutils" />
 <section id="langkah-3">
-<h2>Langkah 3<a class="headerlink" href="#langkah-3" title="Link to this heading">#</a></h2>
-<p>Ubah 7 di kolom 3 baris 5 menjadi 1 (pivot)</p>
+<h3>Langkah 3<a class="headerlink" href="#langkah-3" title="Link to this heading">#</a></h3>
+<p>Hilangkan elemen pada kolom 3 baris 5</p>
 <div class="math notranslate nohighlight">
 \[
-R_5 \leftarrow \frac{1}{7}R_5
+R_5 \leftarrow R_5 - 7R_3
 \]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -469,17 +459,17 @@ R_5 \leftarrow \frac{1}{7}R_5
 0&amp;1&amp;3&amp;0&amp;0&amp;11\\
 0&amp;0&amp;1&amp;4&amp;0&amp;19\\
 0&amp;0&amp;0&amp;1&amp;5&amp;29\\
-0&amp;0&amp;1&amp;0&amp;0&amp;3
+0&amp;0&amp;0&amp;-28&amp;0&amp;-112
 \end{bmatrix}
 \end{split}\]</div>
 </section>
 <hr class="docutils" />
 <section id="langkah-4">
-<h2>Langkah 4<a class="headerlink" href="#langkah-4" title="Link to this heading">#</a></h2>
-<p>Hilangkan 1 di kolom 3 baris 5</p>
+<h3>Langkah 4<a class="headerlink" href="#langkah-4" title="Link to this heading">#</a></h3>
+<p>Membuat pivot 1 pada baris 5 kolom 4</p>
 <div class="math notranslate nohighlight">
 \[
-R_5 \leftarrow R_5 - R_3
+R_5 \leftarrow \frac{1}{-28}R_5
 \]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -488,69 +478,112 @@ R_5 \leftarrow R_5 - R_3
 0&amp;1&amp;3&amp;0&amp;0&amp;11\\
 0&amp;0&amp;1&amp;4&amp;0&amp;19\\
 0&amp;0&amp;0&amp;1&amp;5&amp;29\\
-0&amp;0&amp;0&amp;-4&amp;0&amp;-16
+0&amp;0&amp;0&amp;1&amp;0&amp;4
 \end{bmatrix}
 \end{split}\]</div>
 </section>
 <hr class="docutils" />
 <section id="langkah-5">
-<h2>Langkah 5<a class="headerlink" href="#langkah-5" title="Link to this heading">#</a></h2>
-<p>Ubah -4 di kolom 4 baris 5 menjadi 1 (pivot)</p>
-<div class="math notranslate nohighlight">
-\[
-R_5 \leftarrow -\frac{1}{4}R_5
-\]</div>
+<h3>Langkah 5<a class="headerlink" href="#langkah-5" title="Link to this heading">#</a></h3>
+<p>Menukar baris agar pivot terurut
+$<span class="math notranslate nohighlight">\(
+R_4 \leftrightarrow R_5
+\)</span>$</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
 1&amp;2&amp;0&amp;0&amp;0&amp;5\\
 0&amp;1&amp;3&amp;0&amp;0&amp;11\\
 0&amp;0&amp;1&amp;4&amp;0&amp;19\\
-0&amp;0&amp;0&amp;1&amp;5&amp;29\\
-0&amp;0&amp;0&amp;1&amp;0&amp;4
+0&amp;0&amp;0&amp;1&amp;0&amp;4\\
+0&amp;0&amp;0&amp;1&amp;5&amp;29
 \end{bmatrix}
 \end{split}\]</div>
 </section>
 <hr class="docutils" />
 <section id="langkah-6">
-<h2>Langkah 6<a class="headerlink" href="#langkah-6" title="Link to this heading">#</a></h2>
-<p>Hilangkan 1 di kolom 4 baris 4</p>
+<h3>Langkah 6<a class="headerlink" href="#langkah-6" title="Link to this heading">#</a></h3>
+<p>Hilangkan elemen 4 pada kolom 4 baris 3</p>
 <div class="math notranslate nohighlight">
 \[
-R_4 \leftarrow R_4 - R_5
+R_3 \leftarrow R_3 - 4R_4
 \]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
 1&amp;2&amp;0&amp;0&amp;0&amp;5\\
 0&amp;1&amp;3&amp;0&amp;0&amp;11\\
-0&amp;0&amp;1&amp;4&amp;0&amp;19\\
-0&amp;0&amp;0&amp;0&amp;5&amp;25\\
-0&amp;0&amp;0&amp;1&amp;0&amp;4
+0&amp;0&amp;1&amp;0&amp;0&amp;3\\
+0&amp;0&amp;0&amp;1&amp;0&amp;4\\
+0&amp;0&amp;0&amp;1&amp;5&amp;29
 \end{bmatrix}
 \end{split}\]</div>
 </section>
 <hr class="docutils" />
 <section id="langkah-7">
-<h2>Langkah 7<a class="headerlink" href="#langkah-7" title="Link to this heading">#</a></h2>
-<p>Ubah 5 di kolom 5 baris 4 menjadi 1 (pivot)</p>
+<h3>Langkah 7<a class="headerlink" href="#langkah-7" title="Link to this heading">#</a></h3>
+<p>Hilangkan elemen pada kolom 4 baris 5</p>
 <div class="math notranslate nohighlight">
 \[
-R_4 \leftarrow \frac{1}{5}R_4
+R_5 \leftarrow R_5 - R_4
 \]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
 1&amp;2&amp;0&amp;0&amp;0&amp;5\\
 0&amp;1&amp;3&amp;0&amp;0&amp;11\\
-0&amp;0&amp;1&amp;4&amp;0&amp;19\\
-0&amp;0&amp;0&amp;0&amp;1&amp;5\\
-0&amp;0&amp;0&amp;1&amp;0&amp;4
+0&amp;0&amp;1&amp;0&amp;0&amp;3\\
+0&amp;0&amp;0&amp;1&amp;0&amp;4\\
+0&amp;0&amp;0&amp;0&amp;5&amp;25
 \end{bmatrix}
 \end{split}\]</div>
 </section>
-<section id="hasil-akhir">
-<h2>Hasil Akhir<a class="headerlink" href="#hasil-akhir" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="langkah-8">
+<h3>Langkah 8<a class="headerlink" href="#langkah-8" title="Link to this heading">#</a></h3>
+<p>Membuat pivot 1 pada kolom 5 baris 5</p>
+<div class="math notranslate nohighlight">
+\[
+R_5 \leftarrow \frac{1}{5}R_5
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1&amp;2&amp;0&amp;0&amp;0&amp;5\\
+0&amp;1&amp;3&amp;0&amp;0&amp;11\\
+0&amp;0&amp;1&amp;0&amp;0&amp;3\\
+0&amp;0&amp;0&amp;1&amp;0&amp;4\\
+0&amp;0&amp;0&amp;0&amp;1&amp;5
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="langkah-9">
+<h3>Langkah 9<a class="headerlink" href="#langkah-9" title="Link to this heading">#</a></h3>
+<p>Hilangkan elemen pada kolom 3 baris 2</p>
+<div class="math notranslate nohighlight">
+\[
+R_2 \leftarrow R_2 - 3R_3
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1&amp;2&amp;0&amp;0&amp;0&amp;5\\
+0&amp;1&amp;0&amp;0&amp;0&amp;2\\
+0&amp;0&amp;1&amp;0&amp;0&amp;3\\
+0&amp;0&amp;0&amp;1&amp;0&amp;4\\
+0&amp;0&amp;0&amp;0&amp;1&amp;5
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="langkah-10">
+<h3>Langkah 10<a class="headerlink" href="#langkah-10" title="Link to this heading">#</a></h3>
+<p>Hilangkan elemen pada kolom 2 baris 1</p>
+<div class="math notranslate nohighlight">
+\[
+R_1 \leftarrow R_1 - 2R_2
+\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
@@ -561,6 +594,7 @@ R_4 \leftarrow \frac{1}{5}R_4
 0&amp;0&amp;0&amp;0&amp;1&amp;5
 \end{bmatrix}
 \end{split}\]</div>
+</section>
 </section>
 </section>
 
@@ -631,15 +665,17 @@ R_4 \leftarrow \frac{1}{5}R_4
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-5-persamaan-dan-5-variabel">Membuat 5 Persamaan dan 5 Variabel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-awal">Matriks Awal</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1">Langkah 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2">Langkah 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3">Langkah 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4">Langkah 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5">Langkah 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-6">Langkah 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-7">Langkah 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-8">Langkah 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-9">Langkah 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-10">Langkah 10</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2">Langkah 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3">Langkah 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4">Langkah 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5">Langkah 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-6">Langkah 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-7">Langkah 7</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir">Hasil Akhir</a></li>
 </ul>
   </nav></div>
 
