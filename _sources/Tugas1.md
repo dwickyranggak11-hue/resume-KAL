@@ -4,8 +4,6 @@
 
 ## Matriks Awal
 
-## Matriks Awal
-
 $$
 \begin{bmatrix}
 1&2&0&0&0&5\\
