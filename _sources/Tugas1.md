@@ -16,8 +16,8 @@ $$
 
 ---
 
-## Langkah 1  
-Hilangkan angka 1 di bawah pivot pertama (kolom 1)
+### Langkah 1  
+Hilangkan 1 di kolom 1 baris 5
 
 $$
 R_5 \leftarrow R_5 - R_1
@@ -55,10 +55,10 @@ $$
 ---
 
 ## Langkah 3  
-Hilangkan 7 di kolom 3 baris 5
+Ubah 7 di kolom 3 baris 5 menjadi 1 (pivot)
 
 $$
-R_5 \leftarrow R_5 - 7R_3
+R_5 \leftarrow \frac{1}{7}R_5
 $$
 
 $$
@@ -67,17 +67,17 @@ $$
 0&1&3&0&0&11\\
 0&0&1&4&0&19\\
 0&0&0&1&5&29\\
-0&0&0&-28&0&-112
+0&0&1&0&0&3
 \end{bmatrix}
 $$
 
 ---
 
 ## Langkah 4  
-Hilangkan -28 di kolom 4 baris 5
+Hilangkan 1 di kolom 3 baris 5
 
 $$
-R_5 \leftarrow R_5 + 28R_4
+R_5 \leftarrow R_5 - R_3
 $$
 
 $$
@@ -86,17 +86,17 @@ $$
 0&1&3&0&0&11\\
 0&0&1&4&0&19\\
 0&0&0&1&5&29\\
-0&0&0&0&140&700
+0&0&0&-4&0&-16
 \end{bmatrix}
 $$
 
 ---
 
 ## Langkah 5  
-Buat pivot jadi 1
+Ubah -4 di kolom 4 baris 5 menjadi 1 (pivot)
 
 $$
-R_5 \leftarrow \frac{1}{140}R_5
+R_5 \leftarrow -\frac{1}{4}R_5
 $$
 
 $$
@@ -105,13 +105,49 @@ $$
 0&1&3&0&0&11\\
 0&0&1&4&0&19\\
 0&0&0&1&5&29\\
-0&0&0&0&1&5
+0&0&0&1&0&4
 \end{bmatrix}
 $$
 
 ---
 
-## Eliminasi ke Atas (Gauss–Jordan)
+## Langkah 6
+Hilangkan 1 di kolom 4 baris 4
+
+$$
+R_4 \leftarrow R_4 - R_5
+$$
+
+$$
+\begin{bmatrix}
+1&2&0&0&0&5\\
+0&1&3&0&0&11\\
+0&0&1&4&0&19\\
+0&0&0&0&5&25\\
+0&0&0&1&0&4
+\end{bmatrix}
+$$
+
+---
+
+## Langkah 7
+Ubah 5 di kolom 5 baris 4 menjadi 1 (pivot)
+
+$$
+R_4 \leftarrow \frac{1}{5}R_4
+$$
+
+$$
+\begin{bmatrix}
+1&2&0&0&0&5\\
+0&1&3&0&0&11\\
+0&0&1&4&0&19\\
+0&0&0&0&1&5\\
+0&0&0&1&0&4
+\end{bmatrix}
+$$
+
+## Hasil Akhir
 
 $$
 \begin{bmatrix}
@@ -121,12 +157,4 @@ $$
 0&0&0&1&0&4\\
 0&0&0&0&1&5
 \end{bmatrix}
-$$
-
----
-
-## Solusi
-
-$$
-(x_1,x_2,x_3,x_4,x_5) = (1,2,3,4,5)
 $$
