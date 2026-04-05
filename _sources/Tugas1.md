@@ -220,3 +220,9 @@ x_4 &= 4 \\
 x_5 &= 5
 \end{aligned}
 $$
+
+matriks di inverskan dan matriks B dikalikan dengan matriks invers
+
+![alt text](sske2.png)
+
+![alt text](sske1.png)
