@@ -386,10 +386,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-selanjutnya-determinan-akhir">Operasi Selanjutnya (Determinan Akhir)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-adjoin-matriks">Operasi Adjoin Matriks</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-adjoin-ekspansi-minor">Matriks Adjoin (Ekspansi Minor)</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-adjoin-matriks">Operasi Adjoin Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-invers-matriks">Operasi Invers Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penggunaan">Contoh Penggunaan</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-matriks">Mencari Determinan Matriks</a></li>
@@ -1016,208 +1013,194 @@ u &amp; v &amp; w &amp; x &amp; y
 \end{split}\]</div>
 <hr class="docutils" />
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\operatorname{adj}(A) =
+\[ \begin{align}\begin{aligned}\begin{split}
+\operatorname{adj}(A) = 
 \begin{bmatrix}
-+ &amp; - &amp; + &amp; - &amp; + \\
-- &amp; + &amp; - &amp; + &amp; - \\
-+ &amp; - &amp; + &amp; - &amp; + \\
-- &amp; + &amp; - &amp; + &amp; - \\
-+ &amp; - &amp; + &amp; - &amp; +
-\end{bmatrix}
-\circ
-\begin{bmatrix}
-\det(M_{11}) &amp; \det(M_{12}) &amp; \det(M_{13}) &amp; \det(M_{14}) &amp; \det(M_{15}) \\
-\det(M_{21}) &amp; \det(M_{22}) &amp; \det(M_{23}) &amp; \det(M_{24}) &amp; \det(M_{25}) \\
-\det(M_{31}) &amp; \det(M_{32}) &amp; \det(M_{33}) &amp; \det(M_{34}) &amp; \det(M_{35}) \\
-\det(M_{41}) &amp; \det(M_{42}) &amp; \det(M_{43}) &amp; \det(M_{44}) &amp; \det(M_{45}) \\
-\det(M_{51}) &amp; \det(M_{52}) &amp; \det(M_{53}) &amp; \det(M_{54}) &amp; \det(M_{55})
-\end{bmatrix}
-\end{split}\]</div>
-<hr class="docutils" />
-<section id="matriks-adjoin-ekspansi-minor">
-<h3>Matriks Adjoin (Ekspansi Minor)<a class="headerlink" href="#matriks-adjoin-ekspansi-minor" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\operatorname{adj}(A) =
+a &amp; -b &amp; c &amp; -d &amp; e \\
+-f &amp; g &amp; -h &amp; i &amp; -j \\
+k &amp; l- &amp; m &amp; -n &amp; o \\
+-p &amp; q &amp; -r &amp; s &amp; -t \\
+u &amp; -v &amp; w &amp; -x &amp; y
+\end{bmatrix}\end{split}\\
+---\\### Matriks Adjoin (Ekspansi Minor)\end{aligned}\end{align} \]</div>
+<p>\operatorname{adj}(A) =
 \begin{bmatrix}
 +\begin{vmatrix}
-g &amp; h &amp; i &amp; j \\
-l &amp; m &amp; n &amp; o \\
-q &amp; r &amp; s &amp; t \\
+g &amp; h &amp; i &amp; j \
+l &amp; m &amp; n &amp; o \
+q &amp; r &amp; s &amp; t \
 v &amp; w &amp; x &amp; y
 \end{vmatrix}
 &amp;
 -\begin{vmatrix}
-b &amp; c &amp; d &amp; e \\
-l &amp; m &amp; n &amp; o \\
-q &amp; r &amp; s &amp; t \\
+b &amp; c &amp; d &amp; e \
+l &amp; m &amp; n &amp; o \
+q &amp; r &amp; s &amp; t \
 v &amp; w &amp; x &amp; y
 \end{vmatrix}
 &amp;
 +\begin{vmatrix}
-b &amp; c &amp; d &amp; e \\
-g &amp; h &amp; i &amp; j \\
-q &amp; r &amp; s &amp; t \\
+b &amp; c &amp; d &amp; e \
+g &amp; h &amp; i &amp; j \
+q &amp; r &amp; s &amp; t \
 v &amp; w &amp; x &amp; y
 \end{vmatrix}
 &amp;
 -\begin{vmatrix}
-b &amp; c &amp; d &amp; e \\
-g &amp; h &amp; i &amp; j \\
-l &amp; m &amp; n &amp; o \\
+b &amp; c &amp; d &amp; e \
+g &amp; h &amp; i &amp; j \
+l &amp; m &amp; n &amp; o \
 v &amp; w &amp; x &amp; y
 \end{vmatrix}
 &amp;
 +\begin{vmatrix}
-b &amp; c &amp; d &amp; e \\
-g &amp; h &amp; i &amp; j \\
-l &amp; m &amp; n &amp; o \\
+b &amp; c &amp; d &amp; e \
+g &amp; h &amp; i &amp; j \
+l &amp; m &amp; n &amp; o \
 q &amp; r &amp; s &amp; t
 \end{vmatrix}
-\\
+\
 -\begin{vmatrix}
-f &amp; h &amp; i &amp; j \\
-k &amp; m &amp; n &amp; o \\
-p &amp; r &amp; s &amp; t \\
+f &amp; h &amp; i &amp; j \
+k &amp; m &amp; n &amp; o \
+p &amp; r &amp; s &amp; t \
 u &amp; w &amp; x &amp; y
 \end{vmatrix}
 &amp;
 +\begin{vmatrix}
-a &amp; c &amp; d &amp; e \\
-k &amp; m &amp; n &amp; o \\
-p &amp; r &amp; s &amp; t \\
+a &amp; c &amp; d &amp; e \
+k &amp; m &amp; n &amp; o \
+p &amp; r &amp; s &amp; t \
 u &amp; w &amp; x &amp; y
 \end{vmatrix}
 &amp;
 -\begin{vmatrix}
-a &amp; c &amp; d &amp; e \\
-f &amp; h &amp; i &amp; j \\
-p &amp; r &amp; s &amp; t \\
+a &amp; c &amp; d &amp; e \
+f &amp; h &amp; i &amp; j \
+p &amp; r &amp; s &amp; t \
 u &amp; w &amp; x &amp; y
 \end{vmatrix}
 &amp;
 +\begin{vmatrix}
-a &amp; c &amp; d &amp; e \\
-f &amp; h &amp; i &amp; j \\
-k &amp; m &amp; n &amp; o \\
+a &amp; c &amp; d &amp; e \
+f &amp; h &amp; i &amp; j \
+k &amp; m &amp; n &amp; o \
 u &amp; w &amp; x &amp; y
 \end{vmatrix}
 &amp;
 -\begin{vmatrix}
-a &amp; c &amp; d &amp; e \\
-f &amp; h &amp; i &amp; j \\
-k &amp; m &amp; n &amp; o \\
+a &amp; c &amp; d &amp; e \
+f &amp; h &amp; i &amp; j \
+k &amp; m &amp; n &amp; o \
 p &amp; r &amp; s &amp; t
 \end{vmatrix}
-\\
+\
 +\begin{vmatrix}
-f &amp; g &amp; i &amp; j \\
-k &amp; l &amp; n &amp; o \\
-p &amp; q &amp; s &amp; t \\
+f &amp; g &amp; i &amp; j \
+k &amp; l &amp; n &amp; o \
+p &amp; q &amp; s &amp; t \
 u &amp; v &amp; x &amp; y
 \end{vmatrix}
 &amp;
 -\begin{vmatrix}
-a &amp; b &amp; d &amp; e \\
-k &amp; l &amp; n &amp; o \\
-p &amp; q &amp; s &amp; t \\
+a &amp; b &amp; d &amp; e \
+k &amp; l &amp; n &amp; o \
+p &amp; q &amp; s &amp; t \
 u &amp; v &amp; x &amp; y
 \end{vmatrix}
 &amp;
 +\begin{vmatrix}
-a &amp; b &amp; d &amp; e \\
-f &amp; g &amp; i &amp; j \\
-p &amp; q &amp; s &amp; t \\
+a &amp; b &amp; d &amp; e \
+f &amp; g &amp; i &amp; j \
+p &amp; q &amp; s &amp; t \
 u &amp; v &amp; x &amp; y
 \end{vmatrix}
 &amp;
 -\begin{vmatrix}
-a &amp; b &amp; d &amp; e \\
-f &amp; g &amp; i &amp; j \\
-k &amp; l &amp; n &amp; o \\
+a &amp; b &amp; d &amp; e \
+f &amp; g &amp; i &amp; j \
+k &amp; l &amp; n &amp; o \
 u &amp; v &amp; x &amp; y
 \end{vmatrix}
 &amp;
 +\begin{vmatrix}
-a &amp; b &amp; d &amp; e \\
-f &amp; g &amp; i &amp; j \\
-k &amp; l &amp; n &amp; o \\
+a &amp; b &amp; d &amp; e \
+f &amp; g &amp; i &amp; j \
+k &amp; l &amp; n &amp; o \
 p &amp; q &amp; s &amp; t
 \end{vmatrix}
-\\
+\
 -\begin{vmatrix}
-f &amp; g &amp; h &amp; j \\
-k &amp; l &amp; m &amp; o \\
-p &amp; q &amp; r &amp; t \\
+f &amp; g &amp; h &amp; j \
+k &amp; l &amp; m &amp; o \
+p &amp; q &amp; r &amp; t \
 u &amp; v &amp; w &amp; y
 \end{vmatrix}
 &amp;
 +\begin{vmatrix}
-a &amp; b &amp; c &amp; e \\
-k &amp; l &amp; m &amp; o \\
-p &amp; q &amp; r &amp; t \\
+a &amp; b &amp; c &amp; e \
+k &amp; l &amp; m &amp; o \
+p &amp; q &amp; r &amp; t \
 u &amp; v &amp; w &amp; y
 \end{vmatrix}
 &amp;
 -\begin{vmatrix}
-a &amp; b &amp; c &amp; e \\
-f &amp; g &amp; h &amp; j \\
-p &amp; q &amp; r &amp; t \\
+a &amp; b &amp; c &amp; e \
+f &amp; g &amp; h &amp; j \
+p &amp; q &amp; r &amp; t \
 u &amp; v &amp; w &amp; y
 \end{vmatrix}
 &amp;
 +\begin{vmatrix}
-a &amp; b &amp; c &amp; e \\
-f &amp; g &amp; h &amp; j \\
-k &amp; l &amp; m &amp; o \\
+a &amp; b &amp; c &amp; e \
+f &amp; g &amp; h &amp; j \
+k &amp; l &amp; m &amp; o \
 u &amp; v &amp; w &amp; y
 \end{vmatrix}
 &amp;
 -\begin{vmatrix}
-a &amp; b &amp; c &amp; e \\
-f &amp; g &amp; h &amp; j \\
-k &amp; l &amp; m &amp; o \\
+a &amp; b &amp; c &amp; e \
+f &amp; g &amp; h &amp; j \
+k &amp; l &amp; m &amp; o \
 p &amp; q &amp; r &amp; t
 \end{vmatrix}
-\\
+\
 +\begin{vmatrix}
-f &amp; g &amp; h &amp; i \\
-k &amp; l &amp; m &amp; n \\
-p &amp; q &amp; r &amp; s \\
+f &amp; g &amp; h &amp; i \
+k &amp; l &amp; m &amp; n \
+p &amp; q &amp; r &amp; s \
 u &amp; v &amp; w &amp; x
 \end{vmatrix}
 &amp;
 -\begin{vmatrix}
-a &amp; b &amp; c &amp; d \\
-k &amp; l &amp; m &amp; n \\
-p &amp; q &amp; r &amp; s \\
+a &amp; b &amp; c &amp; d \
+k &amp; l &amp; m &amp; n \
+p &amp; q &amp; r &amp; s \
 u &amp; v &amp; w &amp; x
 \end{vmatrix}
 &amp;
 +\begin{vmatrix}
-a &amp; b &amp; c &amp; d \\
-f &amp; g &amp; h &amp; i \\
-p &amp; q &amp; r &amp; s \\
+a &amp; b &amp; c &amp; d \
+f &amp; g &amp; h &amp; i \
+p &amp; q &amp; r &amp; s \
 u &amp; v &amp; w &amp; x
 \end{vmatrix}
 &amp;
 -\begin{vmatrix}
-a &amp; b &amp; c &amp; d \\
-f &amp; g &amp; h &amp; i \\
-k &amp; l &amp; m &amp; n \\
+a &amp; b &amp; c &amp; d \
+f &amp; g &amp; h &amp; i \
+k &amp; l &amp; m &amp; n \
 u &amp; v &amp; w &amp; x
 \end{vmatrix}
 &amp;
 +\begin{vmatrix}
-a &amp; b &amp; c &amp; d \\
-f &amp; g &amp; h &amp; i \\
-k &amp; l &amp; m &amp; n \\
+a &amp; b &amp; c &amp; d \
+f &amp; g &amp; h &amp; i \
+k &amp; l &amp; m &amp; n \
 p &amp; q &amp; r &amp; s
 \end{vmatrix}
 \end{bmatrix}
-\end{split}\]</div>
-</section>
+$$</p>
 </section>
 <section id="operasi-invers-matriks">
 <h2>Operasi Invers Matriks<a class="headerlink" href="#operasi-invers-matriks" title="Link to this heading">#</a></h2>
@@ -1398,10 +1381,7 @@ A^{-1} =
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-selanjutnya-determinan-akhir">Operasi Selanjutnya (Determinan Akhir)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-adjoin-matriks">Operasi Adjoin Matriks</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-adjoin-ekspansi-minor">Matriks Adjoin (Ekspansi Minor)</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-adjoin-matriks">Operasi Adjoin Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-invers-matriks">Operasi Invers Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penggunaan">Contoh Penggunaan</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-matriks">Mencari Determinan Matriks</a></li>

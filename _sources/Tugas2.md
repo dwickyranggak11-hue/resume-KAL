@@ -615,23 +615,15 @@ $$
 ---
 
 $$
-\operatorname{adj}(A) =
+\operatorname{adj}(A) = 
 \begin{bmatrix}
-+ & - & + & - & + \\
-- & + & - & + & - \\
-+ & - & + & - & + \\
-- & + & - & + & - \\
-+ & - & + & - & +
+a & -b & c & -d & e \\
+-f & g & -h & i & -j \\
+k & l- & m & -n & o \\
+-p & q & -r & s & -t \\
+u & -v & w & -x & y
 \end{bmatrix}
-\circ
-\begin{bmatrix}
-\det(M_{11}) & \det(M_{12}) & \det(M_{13}) & \det(M_{14}) & \det(M_{15}) \\
-\det(M_{21}) & \det(M_{22}) & \det(M_{23}) & \det(M_{24}) & \det(M_{25}) \\
-\det(M_{31}) & \det(M_{32}) & \det(M_{33}) & \det(M_{34}) & \det(M_{35}) \\
-\det(M_{41}) & \det(M_{42}) & \det(M_{43}) & \det(M_{44}) & \det(M_{45}) \\
-\det(M_{51}) & \det(M_{52}) & \det(M_{53}) & \det(M_{54}) & \det(M_{55})
-\end{bmatrix}
-$$
+
 
 ---
 
