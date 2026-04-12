@@ -149,9 +149,9 @@ l \begin{vmatrix} r & s \\ w & x \end{vmatrix}
 \right]
 $$
 
-Determinan 2x2
+## Determinan 2x2 (Bagian $a \, \det(A_{11})$)
 
-$
+$$
 = a \Big(
 g \big(
 m(sy - tx)
@@ -174,23 +174,25 @@ l(rx - sw)
 + n(qw - rv)
 \big)
 \Big)
-$
+$$
 
-### Bagian -b det(A12)
+---
 
-$
-- b \ \det(A_{12}) =
+## Bagian $- b \, \det(A_{12})$
+
+$$
+- b \, \det(A_{12}) =
 - b \begin{vmatrix}
 f & h & i & j \\
 k & m & n & o \\
 p & r & s & t \\
 u & w & x & y
 \end{vmatrix}
-$
+$$
 
-Ekspansi kofaktor menjadi matriks 3x3
+### Ekspansi kofaktor menjadi matriks 3x3
 
-$
+$$
 = - b \left[
 f \begin{vmatrix}
 m & n & o \\
@@ -213,12 +215,12 @@ p & r & s \\
 u & w & x
 \end{vmatrix}
 \right]
-$
+$$
 
-Ekspansi kofaktor menjadi matriks 2x2
+### Ekspansi kofaktor menjadi matriks 2x2
 
-$
-=-b \left[
+$$
+= - b \left[
 f \left(
 m \begin{vmatrix} s & t \\ x & y \end{vmatrix}
 - n \begin{vmatrix} r & t \\ w & y \end{vmatrix}
@@ -240,13 +242,12 @@ k \begin{vmatrix} r & s \\ w & x \end{vmatrix}
 + n \begin{vmatrix} p & r \\ u & w \end{vmatrix}
 \right)
 \right]
-$
+$$
 
-Determinan 2x2
+### Determinan 2x2 (hasil akhir)
 
-$
-=
-- b \Big(
+$$
+= - b \Big(
 f \big(
 m(sy - tx)
 - n(ry - tw)
@@ -268,7 +269,7 @@ k(rx - sw)
 + n(pw - ru)
 \big)
 \Big)
-$
+$$
 
 ### Bagian c det(A13)
 
