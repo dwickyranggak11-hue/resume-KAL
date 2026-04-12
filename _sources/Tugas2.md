@@ -1,6 +1,6 @@
 # Tugas Determinan Matriks
 
-##Matriks 5x5
+## Matriks 5x5
 
 $$
 A =
@@ -15,32 +15,33 @@ $$
 
 ## Operasi Determinan Matriks
 
-Determinan didefinisikan sebagai berikut
+Determinan didefinisikan sebagai berikut:
 
 $$
 \det(A) = \sum_{j=1}^{5} (-1)^{1+j} \, a_{1j} \, \det(A_{1j})
 $$
+## Ekspansi Determinan (Baris Pertama)
 
-$
-\det A=
+$$
+\det(A) =
 (-1)^{1+1} \, a \, \det(A_{11})
 + (-1)^{1+2} \, b \, \det(A_{12})
 + (-1)^{1+3} \, c \, \det(A_{13})
 + (-1)^{1+4} \, d \, \det(A_{14})
 + (-1)^{1+5} \, e \, \det(A_{15})
-$
+$$
 
-$
-\det A =
-a \, \det A_{11}
-- b \, \det A_{12}
-+ c \, \det A_{13}
-- d \, \det A_{14}
-+ e \, \det A_{15}
-$
+$$
+\det(A) =
+a \, \det(A_{11})
+- b \, \det(A_{12})
++ c \, \det(A_{13})
+- d \, \det(A_{14})
++ e \, \det(A_{15})
+$$
 
-$
-\det A =
+$$
+\det(A) =
 a \, \det
 \begin{bmatrix}
 g & h & i & j \\
@@ -56,8 +57,7 @@ k & m & n & o \\
 p & r & s & t \\
 u & w & x & y
 \end{bmatrix}
-+ \;
-c \, \det
++ c \, \det
 \begin{bmatrix}
 f & g & i & j \\
 k & l & n & o \\
@@ -72,7 +72,7 @@ k & l & m & o \\
 p & q & r & t \\
 u & v & w & y
 \end{bmatrix}
-+ \;
++
 e \, \det
 \begin{bmatrix}
 f & g & h & i \\
@@ -80,7 +80,7 @@ k & l & m & n \\
 p & q & r & s \\
 u & v & w & x
 \end{bmatrix}
-$
+$$
 
 ### Bagian a det(A11)
 

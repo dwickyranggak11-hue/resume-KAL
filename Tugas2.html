@@ -387,16 +387,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tugas Determinan Matriks</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-5x5">Matriks 5x5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-determinan-matriks">Operasi Determinan Matriks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#det-a-a-det-begin-bmatrix-g-h-i-j-l-m-n-o-q-r-s-t-v-w-x-y-end-bmatrix">$
-\det A =
-a , \det
-\begin{bmatrix}
-g &amp; h &amp; i &amp; j \
-l &amp; m &amp; n &amp; o \
-q &amp; r &amp; s &amp; t \
-v &amp; w &amp; x &amp; y
-\end{bmatrix}</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-determinan-baris-pertama">Ekspansi Determinan (Baris Pertama)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-a-det-a11">Bagian a det(A11)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-b-det-a12">Bagian -b det(A12)</a></li>
 </ul>
@@ -440,7 +433,8 @@ v &amp; w &amp; x &amp; y
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-determinan-matriks">
 <h1>Tugas Determinan Matriks<a class="headerlink" href="#tugas-determinan-matriks" title="Link to this heading">#</a></h1>
-<p>##Matriks 5x5</p>
+<section id="matriks-5x5">
+<h2>Matriks 5x5<a class="headerlink" href="#matriks-5x5" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 A =
@@ -452,88 +446,77 @@ p &amp; q &amp; r &amp; s &amp; t \\
 u &amp; v &amp; w &amp; x &amp; y
 \end{bmatrix}
 \end{split}\]</div>
+</section>
 <section id="operasi-determinan-matriks">
 <h2>Operasi Determinan Matriks<a class="headerlink" href="#operasi-determinan-matriks" title="Link to this heading">#</a></h2>
-<p>Determinan didefinisikan sebagai berikut</p>
+<p>Determinan didefinisikan sebagai berikut:</p>
 <div class="math notranslate nohighlight">
 \[
 \det(A) = \sum_{j=1}^{5} (-1)^{1+j} \, a_{1j} \, \det(A_{1j})
 \]</div>
-<p>$
-\det A=
-(-1)^{1+1} , a , \det(A_{11})</p>
-<ul class="simple">
-<li><p>(-1)^{1+2} , b , \det(A_{12})</p></li>
-<li><p>(-1)^{1+3} , c , \det(A_{13})</p></li>
-<li><p>(-1)^{1+4} , d , \det(A_{14})</p></li>
-<li><p>(-1)^{1+5} , e , \det(A_{15})
-$</p></li>
-</ul>
-<p>$
-\det A =
-a , \det A_{11}</p>
-<ul class="simple">
-<li><p>b , \det A_{12}</p></li>
-</ul>
-<ul class="simple">
-<li><p>c , \det A_{13}</p></li>
-</ul>
-<ul class="simple">
-<li><p>d , \det A_{14}</p></li>
-</ul>
-<ul class="simple">
-<li><p>e , \det A_{15}
-$</p></li>
-</ul>
 </section>
-<section id="det-a-a-det-begin-bmatrix-g-h-i-j-l-m-n-o-q-r-s-t-v-w-x-y-end-bmatrix">
-<h2>$
-\det A =
-a , \det
+<section id="ekspansi-determinan-baris-pertama">
+<h2>Ekspansi Determinan (Baris Pertama)<a class="headerlink" href="#ekspansi-determinan-baris-pertama" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\det(A) =
+(-1)^{1+1} \, a \, \det(A_{11})
++ (-1)^{1+2} \, b \, \det(A_{12})
++ (-1)^{1+3} \, c \, \det(A_{13})
++ (-1)^{1+4} \, d \, \det(A_{14})
++ (-1)^{1+5} \, e \, \det(A_{15})
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\det(A) =
+a \, \det(A_{11})
+- b \, \det(A_{12})
++ c \, \det(A_{13})
+- d \, \det(A_{14})
++ e \, \det(A_{15})
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\det(A) =
+a \, \det
 \begin{bmatrix}
-g &amp; h &amp; i &amp; j \
-l &amp; m &amp; n &amp; o \
-q &amp; r &amp; s &amp; t \
+g &amp; h &amp; i &amp; j \\
+l &amp; m &amp; n &amp; o \\
+q &amp; r &amp; s &amp; t \\
 v &amp; w &amp; x &amp; y
-\end{bmatrix}<a class="headerlink" href="#det-a-a-det-begin-bmatrix-g-h-i-j-l-m-n-o-q-r-s-t-v-w-x-y-end-bmatrix" title="Link to this heading">#</a></h2>
-<p>b , \det
+\end{bmatrix}
+-
+b \, \det
 \begin{bmatrix}
-f &amp; h &amp; i &amp; j \
-k &amp; m &amp; n &amp; o \
-p &amp; r &amp; s &amp; t \
+f &amp; h &amp; i &amp; j \\
+k &amp; m &amp; n &amp; o \\
+p &amp; r &amp; s &amp; t \\
 u &amp; w &amp; x &amp; y
-\end{bmatrix}</p>
-<ul class="simple">
-<li><p>;
-c , \det
+\end{bmatrix}
++ c \, \det
 \begin{bmatrix}
-f &amp; g &amp; i &amp; j \
-k &amp; l &amp; n &amp; o \
-p &amp; q &amp; s &amp; t \
+f &amp; g &amp; i &amp; j \\
+k &amp; l &amp; n &amp; o \\
+p &amp; q &amp; s &amp; t \\
 u &amp; v &amp; x &amp; y
-\end{bmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li></li>
-</ul>
-<p>d , \det
+\end{bmatrix}
+-
+d \, \det
 \begin{bmatrix}
-f &amp; g &amp; h &amp; j \
-k &amp; l &amp; m &amp; o \
-p &amp; q &amp; r &amp; t \
+f &amp; g &amp; h &amp; j \\
+k &amp; l &amp; m &amp; o \\
+p &amp; q &amp; r &amp; t \\
 u &amp; v &amp; w &amp; y
-\end{bmatrix}</p>
-<ul class="simple">
-<li><p>;
-e , \det
+\end{bmatrix}
++
+e \, \det
 \begin{bmatrix}
-f &amp; g &amp; h &amp; i \
-k &amp; l &amp; m &amp; n \
-p &amp; q &amp; r &amp; s \
+f &amp; g &amp; h &amp; i \\
+k &amp; l &amp; m &amp; n \\
+p &amp; q &amp; r &amp; s \\
 u &amp; v &amp; w &amp; x
 \end{bmatrix}
-$</p></li>
-</ul>
+\end{split}\]</div>
 <section id="bagian-a-det-a11">
 <h3>Bagian a det(A11)<a class="headerlink" href="#bagian-a-det-a11" title="Link to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(
@@ -1656,16 +1639,9 @@ A^{-1} =
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tugas Determinan Matriks</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-5x5">Matriks 5x5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-determinan-matriks">Operasi Determinan Matriks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#det-a-a-det-begin-bmatrix-g-h-i-j-l-m-n-o-q-r-s-t-v-w-x-y-end-bmatrix">$
-\det A =
-a , \det
-\begin{bmatrix}
-g &amp; h &amp; i &amp; j \
-l &amp; m &amp; n &amp; o \
-q &amp; r &amp; s &amp; t \
-v &amp; w &amp; x &amp; y
-\end{bmatrix}</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-determinan-baris-pertama">Ekspansi Determinan (Baris Pertama)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-a-det-a11">Bagian a det(A11)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-b-det-a12">Bagian -b det(A12)</a></li>
 </ul>
