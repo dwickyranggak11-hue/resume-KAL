@@ -625,9 +625,28 @@ u & -v & w & -x & y
 \end{bmatrix}
 
 
+### Matriks Adjoin (Ekspansi Kofaktor)
+
+$$
+\operatorname{adj}(A) =
+\begin{bmatrix}
+C_{11} & C_{21} & C_{31} & C_{41} & C_{51} \\
+C_{12} & C_{22} & C_{32} & C_{42} & C_{52} \\
+C_{13} & C_{23} & C_{33} & C_{43} & C_{53} \\
+C_{14} & C_{24} & C_{34} & C_{44} & C_{54} \\
+C_{15} & C_{25} & C_{35} & C_{45} & C_{55}
+\end{bmatrix}
+$$
+
+dengan
+
+$$
+C_{ij} = (-1)^{i+j} \det(M_{ij})
+$$
+
 ---
 
-### Matriks Adjoin (Ekspansi Minor)
+### Contoh bentuk eksplisit
 
 $$
 \operatorname{adj}(A) =
@@ -640,6 +659,34 @@ v & w & x & y
 \end{vmatrix}
 &
 -\begin{vmatrix}
+f & h & i & j \\
+k & m & n & o \\
+p & r & s & t \\
+u & w & x & y
+\end{vmatrix}
+&
++\begin{vmatrix}
+f & g & i & j \\
+k & l & n & o \\
+p & q & s & t \\
+u & v & x & y
+\end{vmatrix}
+&
+-\begin{vmatrix}
+f & g & h & j \\
+k & l & m & o \\
+p & q & r & t \\
+u & v & w & y
+\end{vmatrix}
+&
++\begin{vmatrix}
+f & g & h & i \\
+k & l & m & n \\
+p & q & r & s \\
+u & v & w & x
+\end{vmatrix}
+\\
+-\begin{vmatrix}
 b & c & d & e \\
 l & m & n & o \\
 q & r & s & t \\
@@ -647,34 +694,6 @@ v & w & x & y
 \end{vmatrix}
 &
 +\begin{vmatrix}
-b & c & d & e \\
-g & h & i & j \\
-q & r & s & t \\
-v & w & x & y
-\end{vmatrix}
-&
--\begin{vmatrix}
-b & c & d & e \\
-g & h & i & j \\
-l & m & n & o \\
-v & w & x & y
-\end{vmatrix}
-&
-+\begin{vmatrix}
-b & c & d & e \\
-g & h & i & j \\
-l & m & n & o \\
-q & r & s & t
-\end{vmatrix}
-\\
--\begin{vmatrix}
-f & h & i & j \\
-k & m & n & o \\
-p & r & s & t \\
-u & w & x & y
-\end{vmatrix}
-&
-+\begin{vmatrix}
 a & c & d & e \\
 k & m & n & o \\
 p & r & s & t \\
@@ -682,125 +701,19 @@ u & w & x & y
 \end{vmatrix}
 &
 -\begin{vmatrix}
-a & c & d & e \\
-f & h & i & j \\
+a & b & d & e \\
 p & r & s & t \\
 u & w & x & y
 \end{vmatrix}
 &
 +\begin{vmatrix}
-a & c & d & e \\
-f & h & i & j \\
-k & m & n & o \\
-u & w & x & y
-\end{vmatrix}
-&
--\begin{vmatrix}
-a & c & d & e \\
-f & h & i & j \\
-k & m & n & o \\
-p & r & s & t
-\end{vmatrix}
-\\
-+\begin{vmatrix}
-f & g & i & j \\
-k & l & n & o \\
-p & q & s & t \\
-u & v & x & y
-\end{vmatrix}
-&
--\begin{vmatrix}
-a & b & d & e \\
-k & l & n & o \\
-p & q & s & t \\
-u & v & x & y
-\end{vmatrix}
-&
-+\begin{vmatrix}
-a & b & d & e \\
-f & g & i & j \\
-p & q & s & t \\
-u & v & x & y
-\end{vmatrix}
-&
--\begin{vmatrix}
-a & b & d & e \\
-f & g & i & j \\
-k & l & n & o \\
-u & v & x & y
-\end{vmatrix}
-&
-+\begin{vmatrix}
-a & b & d & e \\
-f & g & i & j \\
-k & l & n & o \\
-p & q & s & t
-\end{vmatrix}
-\\
--\begin{vmatrix}
-f & g & h & j \\
-k & l & m & o \\
-p & q & r & t \\
-u & v & w & y
-\end{vmatrix}
-&
-+\begin{vmatrix}
-a & b & c & e \\
-k & l & m & o \\
-p & q & r & t \\
-u & v & w & y
-\end{vmatrix}
-&
--\begin{vmatrix}
-a & b & c & e \\
-f & g & h & j \\
-p & q & r & t \\
-u & v & w & y
-\end{vmatrix}
-&
-+\begin{vmatrix}
-a & b & c & e \\
-f & g & h & j \\
-k & l & m & o \\
-u & v & w & y
-\end{vmatrix}
-&
--\begin{vmatrix}
 a & b & c & e \\
 f & g & h & j \\
 k & l & m & o \\
 p & q & r & t
 \end{vmatrix}
-\\
-+\begin{vmatrix}
-f & g & h & i \\
-k & l & m & n \\
-p & q & r & s \\
-u & v & w & x
-\end{vmatrix}
 &
 -\begin{vmatrix}
-a & b & c & d \\
-k & l & m & n \\
-p & q & r & s \\
-u & v & w & x
-\end{vmatrix}
-&
-+\begin{vmatrix}
-a & b & c & d \\
-f & g & h & i \\
-p & q & r & s \\
-u & v & w & x
-\end{vmatrix}
-&
--\begin{vmatrix}
-a & b & c & d \\
-f & g & h & i \\
-k & l & m & n \\
-u & v & w & x
-\end{vmatrix}
-&
-+\begin{vmatrix}
 a & b & c & d \\
 f & g & h & i \\
 k & l & m & n \\
