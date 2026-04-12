@@ -838,7 +838,7 @@ A =
 \end{bmatrix}
 $$
 
-## Mencari Determinan Matriks
+### Mencari Determinan Matriks
 
 $$
 \begin{aligned}
@@ -873,10 +873,10 @@ $$
 \end{aligned}
 $$
 
-###Mencari Adjoin Matriks
+### Mencari Adjoin Matriks
 
-$
-\text{adj}(A) =
+$$
+\operatorname{adj}(A) =
 \begin{bmatrix}
 20 & -30 & 12 & -3 & 0 \\
 0 & 20 & -8 & 2 & 0 \\
@@ -884,11 +884,13 @@ $
 0 & 0 & 0 & 20 & 0 \\
 -20 & 30 & -12 & 3 & -40
 \end{bmatrix}
-$
+$$
 
-###Mencari Invers Matriks
+---
 
-$
+### Mencari Invers Matriks
+
+$$
 A^{-1} =
 \frac{1}{-40}
 \begin{bmatrix}
@@ -898,9 +900,13 @@ A^{-1} =
 0 & 0 & 0 & 20 & 0 \\
 -20 & 30 & -12 & 3 & -40
 \end{bmatrix}
-$
+$$
 
-$
+---
+
+### Hasil Invers yang Disederhanakan
+
+$$
 A^{-1} =
 \begin{bmatrix}
 -\frac{1}{2} & \frac{3}{4} & -\frac{3}{10} & \frac{3}{40} & 0 \\
@@ -909,4 +915,4 @@ A^{-1} =
 0 & 0 & 0 & -\frac{1}{2} & 0 \\
 \frac{1}{2} & -\frac{3}{4} & \frac{3}{10} & -\frac{3}{40} & 1
 \end{bmatrix}
-$
+$$
