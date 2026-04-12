@@ -391,6 +391,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-determinan-matriks">Operasi Determinan Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-determinan-baris-pertama">Ekspansi Determinan (Baris Pertama)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-a-det-a11">Bagian a det(A11)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-a-det-a-11">Ekspansi <span class="math notranslate nohighlight">\(a \, \det(A_{11})\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-kofaktor-menjadi-matriks-3x3">Ekspansi kofaktor menjadi matriks 3x3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-kofaktor-menjadi-matriks-2x2">Ekspansi kofaktor menjadi matriks 2x2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-b-det-a12">Bagian -b det(A12)</a></li>
 </ul>
 </li>
@@ -519,87 +524,75 @@ u &amp; v &amp; w &amp; x
 \end{split}\]</div>
 <section id="bagian-a-det-a11">
 <h3>Bagian a det(A11)<a class="headerlink" href="#bagian-a-det-a11" title="Link to this heading">#</a></h3>
-<p><span class="math notranslate nohighlight">\(
-a \ \det(A_{11}) =
+</section>
+</section>
+<section id="ekspansi-a-det-a-11">
+<h2>Ekspansi <span class="math notranslate nohighlight">\(a \, \det(A_{11})\)</span><a class="headerlink" href="#ekspansi-a-det-a-11" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+a \, \det(A_{11}) =
 a \begin{vmatrix}
 g &amp; h &amp; i &amp; j \\
 l &amp; m &amp; n &amp; o \\
 q &amp; r &amp; s &amp; t \\
 v &amp; w &amp; x &amp; y
 \end{vmatrix}
-\)</span></p>
-<p>Ekspansi kofaktor menjadi matriks 3x3</p>
-<p>$
+\end{split}\]</div>
+<section id="ekspansi-kofaktor-menjadi-matriks-3x3">
+<h3>Ekspansi kofaktor menjadi matriks 3x3<a class="headerlink" href="#ekspansi-kofaktor-menjadi-matriks-3x3" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 = a \left[
 g \begin{vmatrix}
-m &amp; n &amp; o \
-r &amp; s &amp; t \
+m &amp; n &amp; o \\
+r &amp; s &amp; t \\
 w &amp; x &amp; y
-\end{vmatrix}</p>
-<ul class="simple">
-<li><p>h \begin{vmatrix}
-l &amp; n &amp; o \
-q &amp; s &amp; t \
+\end{vmatrix}
+- h \begin{vmatrix}
+l &amp; n &amp; o \\
+q &amp; s &amp; t \\
 v &amp; x &amp; y
-\end{vmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li><p>i \begin{vmatrix}
-l &amp; m &amp; o \
-q &amp; r &amp; t \
+\end{vmatrix}
++ i \begin{vmatrix}
+l &amp; m &amp; o \\
+q &amp; r &amp; t \\
 v &amp; w &amp; y
-\end{vmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li><p>j \begin{vmatrix}
-l &amp; m &amp; n \
-q &amp; r &amp; s \
+\end{vmatrix}
+- j \begin{vmatrix}
+l &amp; m &amp; n \\
+q &amp; r &amp; s \\
 v &amp; w &amp; x
 \end{vmatrix}
 \right]
-$</p></li>
-</ul>
-<p>Ekspansi kofaktor menjadi matriks 2x2</p>
-<p>$
-=a \left[
+\end{split}\]</div>
+</section>
+<section id="ekspansi-kofaktor-menjadi-matriks-2x2">
+<h3>Ekspansi kofaktor menjadi matriks 2x2<a class="headerlink" href="#ekspansi-kofaktor-menjadi-matriks-2x2" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+= a \left[
 g \left(
-m \begin{vmatrix} s &amp; t \ x &amp; y \end{vmatrix}</p>
-<ul class="simple">
-<li><p>n \begin{vmatrix} r &amp; t \ w &amp; y \end{vmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li><p>o \begin{vmatrix} r &amp; s \ w &amp; x \end{vmatrix}
-\right)</p></li>
-</ul>
-<ul class="simple">
-<li><p>h \left(
-l \begin{vmatrix} s &amp; t \ x &amp; y \end{vmatrix}</p></li>
-<li><p>n \begin{vmatrix} q &amp; t \ v &amp; y \end{vmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li><p>o \begin{vmatrix} q &amp; s \ v &amp; x \end{vmatrix}
-\right)</p></li>
-<li><p>i \left(
-l \begin{vmatrix} r &amp; t \ w &amp; y \end{vmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li><p>m \begin{vmatrix} q &amp; t \ v &amp; y \end{vmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li><p>o \begin{vmatrix} q &amp; r \ v &amp; w \end{vmatrix}
-\right)</p></li>
-</ul>
-<ul class="simple">
-<li><p>j \left(
-l \begin{vmatrix} r &amp; s \ w &amp; x \end{vmatrix}</p></li>
-<li><p>m \begin{vmatrix} q &amp; s \ v &amp; x \end{vmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li><p>n \begin{vmatrix} q &amp; r \ v &amp; w \end{vmatrix}
+m \begin{vmatrix} s &amp; t \\ x &amp; y \end{vmatrix}
+- n \begin{vmatrix} r &amp; t \\ w &amp; y \end{vmatrix}
++ o \begin{vmatrix} r &amp; s \\ w &amp; x \end{vmatrix}
+\right)
+- h \left(
+l \begin{vmatrix} s &amp; t \\ x &amp; y \end{vmatrix}
+- n \begin{vmatrix} q &amp; t \\ v &amp; y \end{vmatrix}
++ o \begin{vmatrix} q &amp; s \\ v &amp; x \end{vmatrix}
+\right)
++ i \left(
+l \begin{vmatrix} r &amp; t \\ w &amp; y \end{vmatrix}
+- m \begin{vmatrix} q &amp; t \\ v &amp; y \end{vmatrix}
++ o \begin{vmatrix} q &amp; r \\ v &amp; w \end{vmatrix}
+\right)
+- j \left(
+l \begin{vmatrix} r &amp; s \\ w &amp; x \end{vmatrix}
+- m \begin{vmatrix} q &amp; s \\ v &amp; x \end{vmatrix}
++ n \begin{vmatrix} q &amp; r \\ v &amp; w \end{vmatrix}
 \right)
 \right]
-$</p></li>
-</ul>
+\end{split}\]</div>
 <p>Determinan 2x2</p>
 <p>$
 = a \Big(
@@ -1643,6 +1636,11 @@ A^{-1} =
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-determinan-matriks">Operasi Determinan Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-determinan-baris-pertama">Ekspansi Determinan (Baris Pertama)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-a-det-a11">Bagian a det(A11)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-a-det-a-11">Ekspansi <span class="math notranslate nohighlight">\(a \, \det(A_{11})\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-kofaktor-menjadi-matriks-3x3">Ekspansi kofaktor menjadi matriks 3x3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-kofaktor-menjadi-matriks-2x2">Ekspansi kofaktor menjadi matriks 2x2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-b-det-a12">Bagian -b det(A12)</a></li>
 </ul>
 </li>

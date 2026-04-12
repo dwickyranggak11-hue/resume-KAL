@@ -83,20 +83,21 @@ u & v & w & x
 $$
 
 ### Bagian a det(A11)
+## Ekspansi $a \, \det(A_{11})$
 
-$
-a \ \det(A_{11}) =
+$$
+a \, \det(A_{11}) =
 a \begin{vmatrix}
 g & h & i & j \\
 l & m & n & o \\
 q & r & s & t \\
 v & w & x & y
 \end{vmatrix}
-$
+$$
 
-Ekspansi kofaktor menjadi matriks 3x3
+### Ekspansi kofaktor menjadi matriks 3x3
 
-$
+$$
 = a \left[
 g \begin{vmatrix}
 m & n & o \\
@@ -119,12 +120,12 @@ q & r & s \\
 v & w & x
 \end{vmatrix}
 \right]
-$
+$$
 
-Ekspansi kofaktor menjadi matriks 2x2
+### Ekspansi kofaktor menjadi matriks 2x2
 
-$
-=a \left[
+$$
+= a \left[
 g \left(
 m \begin{vmatrix} s & t \\ x & y \end{vmatrix}
 - n \begin{vmatrix} r & t \\ w & y \end{vmatrix}
@@ -146,7 +147,7 @@ l \begin{vmatrix} r & s \\ w & x \end{vmatrix}
 + n \begin{vmatrix} q & r \\ v & w \end{vmatrix}
 \right)
 \right]
-$
+$$
 
 Determinan 2x2
 
