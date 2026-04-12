@@ -20,7 +20,6 @@ Determinan didefinisikan sebagai berikut:
 $$
 \det(A) = \sum_{j=1}^{5} (-1)^{1+j} \, a_{1j} \, \det(A_{1j})
 $$
-## Ekspansi Determinan (Baris Pertama)
 
 $$
 \det(A) =
@@ -82,8 +81,7 @@ u & v & w & x
 \end{bmatrix}
 $$
 
-### Bagian a det(A11)
-## Ekspansi $a \, \det(A_{11})$
+### Bagian $ a \, \det(A_{11})$
 
 $$
 a \, \det(A_{11}) =
@@ -95,7 +93,7 @@ v & w & x & y
 \end{vmatrix}
 $$
 
-### Ekspansi kofaktor menjadi matriks 3x3
+Ekspansi kofaktor menjadi matriks 3x3
 
 $$
 = a \left[
@@ -122,7 +120,7 @@ v & w & x
 \right]
 $$
 
-### Ekspansi kofaktor menjadi matriks 2x2
+Ekspansi kofaktor menjadi matriks 2x2
 
 $$
 = a \left[
@@ -149,7 +147,7 @@ l \begin{vmatrix} r & s \\ w & x \end{vmatrix}
 \right]
 $$
 
-## Determinan 2x2 (Bagian $a \, \det(A_{11})$)
+Determinan 2x2 (Bagian $a \, \det(A_{11})$)
 
 $$
 = a \Big(
@@ -178,7 +176,7 @@ $$
 
 ---
 
-## Bagian $- b \, \det(A_{12})$
+### Bagian $- b \, \det(A_{12})$
 
 $$
 - b \, \det(A_{12}) =
@@ -190,7 +188,7 @@ u & w & x & y
 \end{vmatrix}
 $$
 
-### Ekspansi kofaktor menjadi matriks 3x3
+Ekspansi kofaktor menjadi matriks 3x3
 
 $$
 = - b \left[
@@ -217,7 +215,7 @@ u & w & x
 \right]
 $$
 
-### Ekspansi kofaktor menjadi matriks 2x2
+Ekspansi kofaktor menjadi matriks 2x2
 
 $$
 = - b \left[
@@ -244,7 +242,7 @@ k \begin{vmatrix} r & s \\ w & x \end{vmatrix}
 \right]
 $$
 
-### Determinan 2x2 (hasil akhir)
+Determinan 2x2 (hasil akhir)
 
 $$
 = - b \Big(
@@ -271,21 +269,21 @@ k(rx - sw)
 \Big)
 $$
 
-### Bagian c det(A13)
+### Bagian $c \, \det(A_{13})$
 
-$
-c \ \det(A_{13}) =
+$$
+c \, \det(A_{13}) =
 c \begin{vmatrix}
 f & g & i & j \\
 k & l & n & o \\
 p & q & s & t \\
 u & v & x & y
 \end{vmatrix}
-$
+$$
 
 Ekspansi kofaktor menjadi matriks 3x3
 
-$
+$$
 =
 c \left[
 f \begin{vmatrix}
@@ -309,11 +307,11 @@ p & q & s \\
 u & v & x
 \end{vmatrix}
 \right]
-$
+$$
 
 Ekspansi kofaktor menjadi matriks 2x2
 
-$
+$$
 =
 c \left[
 f \left(
@@ -337,11 +335,11 @@ k \begin{vmatrix} q & s \\ v & x \end{vmatrix}
 + n \begin{vmatrix} p & q \\ u & v \end{vmatrix}
 \right)
 \right]
-$
+$$
 
 Determinan 2x2
 
-$
+$$
 =
 c \Big(
 f \big(
@@ -365,23 +363,23 @@ k(qx - sv)
 + n(pv - qu)
 \big)
 \Big)
-$
+$$
 
-### Bagian -d det(A14)
+### Bagian $-d \, \det(A_{14})$
 
-$
-- d \ \det(A_{14}) =
+$$
+- d \, \det(A_{14}) =
 - d \begin{vmatrix}
 f & g & h & j \\
 k & l & m & o \\
 p & q & r & t \\
 u & v & w & y
 \end{vmatrix}
-$
+$$
 
 Ekspansi kofaktor menjadi matriks 3x3
 
-$
+$$
 =
 - d \left[
 f \begin{vmatrix}
@@ -405,11 +403,11 @@ p & q & r \\
 u & v & w
 \end{vmatrix}
 \right]
-$
+$$
 
 Ekspansi kofaktor menjadi matriks 2x2
 
-$
+$$
 =
 - d \left[
 f \left(
@@ -433,11 +431,11 @@ k \begin{vmatrix} q & r \\ v & w \end{vmatrix}
 + m \begin{vmatrix} p & q \\ u & v \end{vmatrix}
 \right)
 \right]
-$
+$$
 
-Determinan 2x2
+Determinan 2x2 (hasil akhir)
 
-$
+$$
 =
 - d \Big(
 f \big(
@@ -461,23 +459,23 @@ k(qw - rv)
 + m(pv - qu)
 \big)
 \Big)
-$
+$$
 
-### Bagian e det(A15)
+### Bagian $e \, \det(A_{15})$
 
-$
-e \ \det(A_{15}) =
+$$
+e \, \det(A_{15}) =
 e \begin{vmatrix}
 f & g & h & i \\
 k & l & m & n \\
 p & q & r & s \\
 u & v & w & x
 \end{vmatrix}
-$
+$$
 
 Ekspansi kofaktor menjadi matriks 3x3
 
-$
+$$
 =
 e \left[
 f \begin{vmatrix}
@@ -501,11 +499,11 @@ p & q & r \\
 u & v & w
 \end{vmatrix}
 \right]
-$
+$$
 
 Ekspansi kofaktor menjadi matriks 2x2
 
-$
+$$
 =
 e \left[
 f \left(
@@ -529,11 +527,11 @@ k \begin{vmatrix} q & r \\ v & w \end{vmatrix}
 + m \begin{vmatrix} p & q \\ u & v \end{vmatrix}
 \right)
 \right]
-$
+$$
 
-Determinan 2x2
+Determinan 2x2 (hasil akhir)
 
-$
+$$
 =
 e \Big(
 f \big(
@@ -557,51 +555,53 @@ k(qw - rv)
 + m(pv - qu)
 \big)
 \Big)
-$
+$$
 
-### Operasi selanjutnya
+### Operasi Selanjutnya (Determinan Akhir)
 
-$
+$$
+\begin{aligned}
 \det(A) =
-a \Big[
-g(m(sy - tx) - n(ry - tw) + o(rx - sw))
-- h(l(sy - tx) - n(qy - tv) + o(qx - sv))
-+ i(l(ry - tw) - m(qy - tv) + o(qw - rv))
-- j(l(rx - sw) - m(qx - sv) + n(qw - rv))
+&\, a \Big[
+g(m(sy - tx) - n(ry - tw) + o(rx - sw)) \\
+&- h(l(sy - tx) - n(qy - tv) + o(qx - sv)) \\
+&+ i(l(ry - tw) - m(qy - tv) + o(qw - rv)) \\
+&- j(l(rx - sw) - m(qx - sv) + n(qw - rv))
+\Big] \\
+&- b \Big[
+f(m(sy - tx) - n(ry - tw) + o(rx - sw)) \\
+&- h(k(sy - tx) - n(py - tu) + o(px - su)) \\
+&+ i(k(ry - tw) - m(py - tu) + o(pw - ru)) \\
+&- j(k(rx - sw) - m(px - su) + n(pw - ru))
+\Big] \\
+&+ c \Big[
+f(l(sy - tx) - n(qy - tv) + o(qx - sv)) \\
+&- g(k(sy - tx) - n(py - tu) + o(px - su)) \\
+&+ i(k(qy - tv) - l(py - tu) + o(pv - qu)) \\
+&- j(k(qx - sv) - l(px - su) + n(pv - qu))
+\Big] \\
+&- d \Big[
+f(l(ry - tw) - m(qy - tv) + o(qw - rv)) \\
+&- g(k(ry - tw) - m(py - tu) + o(pw - ru)) \\
+&+ h(k(qy - tv) - l(py - tu) + o(pv - qu)) \\
+&- j(k(qw - rv) - l(pw - ru) + m(pv - qu))
+\Big] \\
+&+ e \Big[
+f(l(rx - sw) - m(qx - sv) + n(qw - rv)) \\
+&- g(k(rx - sw) - m(px - su) + n(pw - ru)) \\
+&+ h(k(qx - sv) - l(px - su) + n(pv - qu)) \\
+&- i(k(qw - rv) - l(pw - ru) + m(pv - qu))
 \Big]
-- b \Big[
-f(m(sy - tx) - n(ry - tw) + o(rx - sw))
-- h(k(sy - tx) - n(py - tu) + o(px - su))
-+ i(k(ry - tw) - m(py - tu) + o(pw - ru))
-- j(k(rx - sw) - m(px - su) + n(pw - ru))
-\Big]
-+ c \Big[
-f(l(sy - tx) - n(qy - tv) + o(qx - sv))
-- g(k(sy - tx) - n(py - tu) + o(px - su))
-+ i(k(qy - tv) - l(py - tu) + o(pv - qu))
-- j(k(qx - sv) - l(px - su) + n(pv - qu))
-\Big]
-- d \Big[
-f(l(ry - tw) - m(qy - tv) + o(qw - rv))
-- g(k(ry - tw) - m(py - tu) + o(pw - ru))
-+ h(k(qy - tv) - l(py - tu) + o(pv - qu))
-- j(k(qw - rv) - l(pw - ru) + m(pv - qu))
-\Big]
-+ e \Big[
-f(l(rx - sw) - m(qx - sv) + n(qw - rv))
-- g(k(rx - sw) - m(px - su) + n(pw - ru))
-+ h(k(qx - sv) - l(px - su) + n(pv - qu))
-- i(k(qw - rv) - l(pw - ru) + m(pv - qu))
-\Big]
-$
-
-##Operasi Adjoin Matriks
-
-$$
- \operatorname{adj}(A)_{ij} = (-1)^{i+j} M_{ji}
+\end{aligned}
 $$
 
-$
+## Operasi Adjoin Matriks
+
+$$
+\operatorname{adj}(A)_{ij} = (-1)^{i+j} M_{ji}
+$$
+
+$$
 A =
 \begin{bmatrix}
 a & b & c & d & e \\
@@ -610,271 +610,268 @@ k & l & m & n & o \\
 p & q & r & s & t \\
 u & v & w & x & y
 \end{bmatrix}
-$
+$$
 
-$
-\operatorname{adj}A =
+---
+
+$$
+\operatorname{adj}(A) =
 \begin{bmatrix}
-a & -b & c & -d & e \\
--f & g & -h & i & -j \\
-k & -l & m & -n & o \\
--p & q & -r & s & -t \\
-u & -v & w & -x & y
++ & - & + & - & + \\
+- & + & - & + & - \\
++ & - & + & - & + \\
+- & + & - & + & - \\
++ & - & + & - & +
 \end{bmatrix}
-$
+\circ
+\begin{bmatrix}
+\det(M_{11}) & \det(M_{12}) & \det(M_{13}) & \det(M_{14}) & \det(M_{15}) \\
+\det(M_{21}) & \det(M_{22}) & \det(M_{23}) & \det(M_{24}) & \det(M_{25}) \\
+\det(M_{31}) & \det(M_{32}) & \det(M_{33}) & \det(M_{34}) & \det(M_{35}) \\
+\det(M_{41}) & \det(M_{42}) & \det(M_{43}) & \det(M_{44}) & \det(M_{45}) \\
+\det(M_{51}) & \det(M_{52}) & \det(M_{53}) & \det(M_{54}) & \det(M_{55})
+\end{bmatrix}
+$$
 
-$
-\operatorname{adj}A =
+---
+
+### Matriks Adjoin (Ekspansi Minor)
+
+$$
+\operatorname{adj}(A) =
 \begin{bmatrix}
 +\begin{vmatrix}
-g & h & i & j\\
-l & m & n & o\\
-q & r & s & t\\
+g & h & i & j \\
+l & m & n & o \\
+q & r & s & t \\
 v & w & x & y
 \end{vmatrix}
 &
 -\begin{vmatrix}
-b & c & d & e\\
-l & m & n & o\\
-q & r & s & t\\
+b & c & d & e \\
+l & m & n & o \\
+q & r & s & t \\
 v & w & x & y
 \end{vmatrix}
 &
 +\begin{vmatrix}
-b & c & d & e\\
-g & h & i & j\\
-q & r & s & t\\
+b & c & d & e \\
+g & h & i & j \\
+q & r & s & t \\
 v & w & x & y
 \end{vmatrix}
 &
 -\begin{vmatrix}
-b & c & d & e\\
-g & h & i & j\\
-l & m & n & o\\
+b & c & d & e \\
+g & h & i & j \\
+l & m & n & o \\
 v & w & x & y
 \end{vmatrix}
 &
 +\begin{vmatrix}
-b & c & d & e\\
-g & h & i & j\\
-l & m & n & o\\
+b & c & d & e \\
+g & h & i & j \\
+l & m & n & o \\
 q & r & s & t
 \end{vmatrix}
 \\
 -\begin{vmatrix}
-f & h & i & j\\
-k & m & n & o\\
-p & r & s & t\\
+f & h & i & j \\
+k & m & n & o \\
+p & r & s & t \\
 u & w & x & y
 \end{vmatrix}
 &
 +\begin{vmatrix}
-a & c & d & e\\
-k & m & n & o\\
-p & r & s & t\\
+a & c & d & e \\
+k & m & n & o \\
+p & r & s & t \\
 u & w & x & y
 \end{vmatrix}
 &
 -\begin{vmatrix}
-a & c & d & e\\
-f & h & i & j\\
-p & r & s & t\\
+a & c & d & e \\
+f & h & i & j \\
+p & r & s & t \\
 u & w & x & y
 \end{vmatrix}
 &
 +\begin{vmatrix}
-a & c & d & e\\
-f & h & i & j\\
-k & m & n & o\\
+a & c & d & e \\
+f & h & i & j \\
+k & m & n & o \\
 u & w & x & y
 \end{vmatrix}
 &
 -\begin{vmatrix}
-a & c & d & e\\
-f & h & i & j\\
-k & m & n & o\\
+a & c & d & e \\
+f & h & i & j \\
+k & m & n & o \\
 p & r & s & t
 \end{vmatrix}
 \\
 +\begin{vmatrix}
-f & g & i & j\\
-k & l & n & o\\
-p & q & s & t\\
+f & g & i & j \\
+k & l & n & o \\
+p & q & s & t \\
 u & v & x & y
 \end{vmatrix}
 &
 -\begin{vmatrix}
-a & b & d & e\\
-k & l & n & o\\
-p & q & s & t\\
+a & b & d & e \\
+k & l & n & o \\
+p & q & s & t \\
 u & v & x & y
 \end{vmatrix}
 &
 +\begin{vmatrix}
-a & b & d & e\\
-f & g & i & j\\
-p & q & s & t\\
+a & b & d & e \\
+f & g & i & j \\
+p & q & s & t \\
 u & v & x & y
 \end{vmatrix}
 &
 -\begin{vmatrix}
-a & b & d & e\\
-f & g & i & j\\
-k & l & n & o\\
+a & b & d & e \\
+f & g & i & j \\
+k & l & n & o \\
 u & v & x & y
 \end{vmatrix}
 &
 +\begin{vmatrix}
-a & b & d & e\\
-f & g & i & j\\
-k & l & n & o\\
+a & b & d & e \\
+f & g & i & j \\
+k & l & n & o \\
 p & q & s & t
 \end{vmatrix}
 \\
 -\begin{vmatrix}
-f & g & h & j\\
-k & l & m & o\\
-p & q & r & t\\
+f & g & h & j \\
+k & l & m & o \\
+p & q & r & t \\
 u & v & w & y
 \end{vmatrix}
 &
 +\begin{vmatrix}
-a & b & c & e\\
-k & l & m & o\\
-p & q & r & t\\
+a & b & c & e \\
+k & l & m & o \\
+p & q & r & t \\
 u & v & w & y
 \end{vmatrix}
 &
 -\begin{vmatrix}
-a & b & c & e\\
-f & g & h & j\\
-p & q & r & t\\
+a & b & c & e \\
+f & g & h & j \\
+p & q & r & t \\
 u & v & w & y
 \end{vmatrix}
 &
 +\begin{vmatrix}
-a & b & c & e\\
-f & g & h & j\\
-k & l & m & o\\
+a & b & c & e \\
+f & g & h & j \\
+k & l & m & o \\
 u & v & w & y
 \end{vmatrix}
 &
 -\begin{vmatrix}
-a & b & c & e\\
-f & g & h & j\\
-k & l & m & o\\
+a & b & c & e \\
+f & g & h & j \\
+k & l & m & o \\
 p & q & r & t
 \end{vmatrix}
 \\
 +\begin{vmatrix}
-f & g & h & i\\
-k & l & m & n\\
-p & q & r & s\\
+f & g & h & i \\
+k & l & m & n \\
+p & q & r & s \\
 u & v & w & x
 \end{vmatrix}
 &
 -\begin{vmatrix}
-a & b & c & d\\
-k & l & m & n\\
-p & q & r & s\\
+a & b & c & d \\
+k & l & m & n \\
+p & q & r & s \\
 u & v & w & x
 \end{vmatrix}
 &
 +\begin{vmatrix}
-a & b & c & d\\
-f & g & h & i\\
-p & q & r & s\\
+a & b & c & d \\
+f & g & h & i \\
+p & q & r & s \\
 u & v & w & x
 \end{vmatrix}
 &
 -\begin{vmatrix}
-a & b & c & d\\
-f & g & h & i\\
-k & l & m & n\\
+a & b & c & d \\
+f & g & h & i \\
+k & l & m & n \\
 u & v & w & x
 \end{vmatrix}
 &
 +\begin{vmatrix}
-a & b & c & d\\
-f & g & h & i\\
-k & l & m & n\\
+a & b & c & d \\
+f & g & h & i \\
+k & l & m & n \\
 p & q & r & s
 \end{vmatrix}
 \end{bmatrix}
-$
+$$
 
-##Operasi Invers Matriks
+## Operasi Invers Matriks
+
 $$
-A^{-1} = \frac{1}{\det(A)} \operatorname{Adj}(A)
+A^{-1} = \frac{1}{\det(A)} \operatorname{adj}(A)
 $$
+
+---
 
 ## Contoh Penggunaan
 
 $$
 A =
 \begin{bmatrix}
-1&2&0&0&0\\
-0&1&3&0&0\\
-0&0&1&4&0\\
-0&0&0&1&5\\
-1&0&1&0&0
+1 & 2 & 0 & 0 & 0 \\
+0 & 1 & 3 & 0 & 0 \\
+0 & 0 & 1 & 4 & 0 \\
+0 & 0 & 0 & 1 & 5 \\
+1 & 0 & 1 & 0 & 0
 \end{bmatrix}
 $$
 
-###Mencari Determinan Matriks
+## Mencari Determinan Matriks
 
-$
-\det(A) =
-1 \Big[
-1(1(1\cdot0 - 5\cdot0) - 4(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 1\cdot1))
-- 3(0(1\cdot0 - 5\cdot0) - 4(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 1\cdot0))
-+ 0(0(0\cdot0 - 5\cdot1) - 1(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 0\cdot1))
-- 0(0(0\cdot0 - 1\cdot1) - 1(0\cdot0 - 0\cdot1) + 4(0\cdot0 - 0\cdot1))
-\Big]
-- 2 \Big[
-0(1(1\cdot0 - 5\cdot0) - 4(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 1\cdot1))
-- 3(0(1\cdot0 - 5\cdot0) - 4(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 1\cdot0))
-+ 0(0(0\cdot0 - 5\cdot1) - 1(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 0\cdot1))
-- 0(0(0\cdot0 - 1\cdot1) - 1(0\cdot0 - 0\cdot1) + 4(0\cdot0 - 0\cdot1))
-\Big]
-+ 0 \Big[
-0(0(1\cdot0 - 5\cdot0) - 4(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 1\cdot1))
-- 1(0(1\cdot0 - 5\cdot0) - 4(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 1\cdot0))
-+ 0(0(0\cdot0 - 5\cdot1) - 0(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 0\cdot1))
-- 0(0(0\cdot0 - 1\cdot1) - 0(0\cdot0 - 0\cdot1) + 4(0\cdot0 - 0\cdot1))
-\Big]
-- 0 \Big[
-0(0(1\cdot0 - 5\cdot0) - 1(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 1\cdot1))
-- 1(0(1\cdot0 - 5\cdot0) - 1(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 1\cdot0))
-+ 3(0(0\cdot0 - 5\cdot1) - 0(0\cdot0 - 5\cdot1) + 0(0\cdot0 - 0\cdot1))
-- 0(0(0\cdot0 - 1\cdot1) - 0(0\cdot0 - 0\cdot1) + 1(0\cdot0 - 0\cdot1))
-\Big]
-+ 0 \Big[
-0(0(1\cdot0 - 1\cdot1) - 1(0\cdot0 - 1\cdot1) + 4(0\cdot0 - 0\cdot1))
-- 1(0(1\cdot0 - 1\cdot1) - 1(0\cdot0 - 1\cdot1) + 4(0\cdot0 - 0\cdot1))
-+ 3(0(0\cdot0 - 1\cdot1) - 0(0\cdot0 - 1\cdot1) + 4(0\cdot0 - 0\cdot1))
-- 0(0(0\cdot0 - 1\cdot1) - 0(0\cdot0 - 1\cdot1) + 1(0\cdot0 - 0\cdot1))
-\Big]
-$
-
-$
+$$
 \begin{aligned}
 \det(A)
-&= 1\Big[
-1(1\cdot0 - 5\cdot0) - 4(0\cdot0 - 5\cdot1)
-- 3\big(0(1\cdot0 - 5\cdot0) - 4(0\cdot0 - 5\cdot1)\big)
+&=
+1 \Big[
+1(1\cdot0 - 5\cdot0)
+- 4(0\cdot0 - 5\cdot1)
++ 0(\cdots)
+- 0(\cdots)
 \Big] \\
-&= 1\Big[
-1(0) - 4(-5)
-- 3(0 - 4(-5))
+&\quad
+- 2 \Big[
+0(\cdots)
+- 3(0\cdot0 - 5\cdot1)
++ 0(\cdots)
+- 0(\cdots)
 \Big] \\
-&= 1\Big[
+&\quad
++ 0(\cdots)
+- 0(\cdots)
++ 0(\cdots) \\
+\\
+&= 1 \Big[
+1(0) - 4(-5) - 3\big(0 - 4(-5)\big)
+\Big] \\
+&= 1 \Big[
 0 + 20 - 3(20)
 \Big] \\
 &= 1(20 - 60) \\
 &= -40
 \end{aligned}
-$
+$$
 
 ###Mencari Adjoin Matriks
 
