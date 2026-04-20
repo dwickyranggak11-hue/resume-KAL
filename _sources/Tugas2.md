@@ -871,7 +871,7 @@ $$
 &= 1(20 - 60) \\
 &= -40
 \end{aligned}
-$$
+$B$
 
 ### Mencari Adjoin Matriks
 
