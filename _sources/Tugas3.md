@@ -6,7 +6,7 @@ SOAL.
 
 $$\sum_{k=1}^n (-1)^{i+k} a_{ik} M_{ik}$$
 
-dengan M_{ij} adalah minior dari matrik A dan
+dengan $M_{ij}$ adalah minior dari matrik A dan
 
 $$M_{ij} = \det A_{ij}.$$
 
@@ -140,7 +140,7 @@ $$
 
 Minor:
 
-M11:
+$M_{11}$:
 
 $$
 M_{11} =
@@ -169,7 +169,7 @@ $$
 = 8 + 4 + 4 = 16
 $$
 
-M12:
+$M_{12}$:
 
 $$
 M_{12} =
@@ -198,7 +198,7 @@ $$
 = -24 + 4 + 4 = -16
 $$
 
-M13:
+$M_{13}$:
 
 $$
 M_{13} =
@@ -227,7 +227,7 @@ $$
 = 12 + 4 + 0 = 16
 $$
 
-M14:
+$M_{14}$:
 
 $$
 M_{14} =
