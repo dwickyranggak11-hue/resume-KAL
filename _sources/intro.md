@@ -1,7 +1,8 @@
 # Komputsai Aljabar Linear
 
-Nama : Dwiky Rangga Kusuma
+Nama : Dwicky Rangga Kusuma
 Nim : 250411100117
+Kelas : IF-2A
 
 Resume Materi KAL
 
