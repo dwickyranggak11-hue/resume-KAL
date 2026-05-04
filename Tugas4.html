@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Catatan KAL</title>
+    <title>Transformasi Geometri Sumbu Y &#8212; Catatan KAL</title>
   
   
   
@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas4';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -172,11 +174,12 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Materi1.html">Materi 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas1.html">Tugas Eliminasi Gaussian</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas2.html">Tugas Determinan Matriks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas3.html">Evaluasi Determinan Dan Invers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Transformasi Geometri Sumbu Y</a></li>
 </ul>
 
     </div>
@@ -362,7 +365,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Transformasi Geometri Sumbu Y</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -371,9 +374,16 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titik-awal">Titik Awal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-refleksi-terhadap-sumbu-y">Matriks Refleksi terhadap Sumbu Y</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#translasi">Translasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-setelah-translasi">Refleksi Setelah Translasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hubungan-transformasi">Hubungan Transformasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -384,7 +394,85 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  
+  <section class="tex2jax_ignore mathjax_ignore" id="transformasi-geometri-sumbu-y">
+<h1>Transformasi Geometri Sumbu Y<a class="headerlink" href="#transformasi-geometri-sumbu-y" title="Link to this heading">#</a></h1>
+<p>link colab : <a class="reference external" href="https://colab.research.google.com/drive/12A7BTAVEJgqoGO9w1LhpLuS_Jbe_9N60?usp=sharing">https://colab.research.google.com/drive/12A7BTAVEJgqoGO9w1LhpLuS_Jbe_9N60?usp=sharing</a></p>
+<section id="titik-awal">
+<h2>Titik Awal<a class="headerlink" href="#titik-awal" title="Link to this heading">#</a></h2>
+<p>terdapat bangun berbentuk persegi dengan titik-titik:</p>
+<p><span class="math notranslate nohighlight">\(A(-9, 2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(B(-7, 2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(C(-7, 4)\)</span></p>
+<p><span class="math notranslate nohighlight">\(D(-9, 4)\)</span></p>
+<p>Bangun ini berada di sebelah kiri sumbu Y.</p>
+</section>
+<section id="matriks-refleksi-terhadap-sumbu-y">
+<h2>Matriks Refleksi terhadap Sumbu Y<a class="headerlink" href="#matriks-refleksi-terhadap-sumbu-y" title="Link to this heading">#</a></h2>
+<p>Refleksi terhadap sumbu Y dapat dinyatakan dalam bentuk matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+x' \\
+y'
+\end{bmatrix}
+=
+\begin{bmatrix}
+-1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+\end{split}\]</div>
+<p>Hasilnya:</p>
+<ul class="simple">
+<li><p>x’ = -x</p></li>
+<li><p>y’ = y</p></li>
+</ul>
+<p>Sehingga:
+(x, y) → (-x, y)</p>
+<hr class="docutils" />
+<p>Jika diterapkan pada titik-titik bangun:</p>
+<p><span class="math notranslate nohighlight">\(A(-9, 2) → A'(9, 2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(B(-7, 2) → B'(7, 2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(C(-7, 4) → C'(7, 4)\)</span></p>
+<p><span class="math notranslate nohighlight">\(D(-9, 4) → D'(9, 4)\)</span></p>
+<p>Matriks ini menunjukkan bahwa refleksi terhadap sumbu Y hanya mengubah tanda koordinat x, sedangkan koordinat y tetap.</p>
+</section>
+<section id="translasi">
+<h2>Translasi<a class="headerlink" href="#translasi" title="Link to this heading">#</a></h2>
+<p>Translasi menggeser setiap titik sejauh t satuan ke arah sumbu x:
+(x, y) → (x + t, y)</p>
+<p>Maka:</p>
+<p><span class="math notranslate nohighlight">\(A(-9, 2) → A₁(-9 + t, 2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(B(-7, 2) → B₁(-7 + t, 2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(C(-7, 4) → C₁(-7 + t, 4)\)</span></p>
+<p><span class="math notranslate nohighlight">\(D(-9, 4) → D₁(-9 + t, 4)\)</span></p>
+<p>Semua titik bergeser sejauh yang sama tanpa mengubah bentuk bangun.</p>
+</section>
+<section id="refleksi-setelah-translasi">
+<h2>Refleksi Setelah Translasi<a class="headerlink" href="#refleksi-setelah-translasi" title="Link to this heading">#</a></h2>
+<p>Hasil translasi direfleksikan kembali terhadap sumbu Y:
+(x + t, y) → (-(x + t), y)</p>
+<p>Maka:</p>
+<p><span class="math notranslate nohighlight">\(A₁(-9 + t, 2) → A₁'(9 - t, 2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(B₁(-7 + t, 2) → B₁'(7 - t, 2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(C₁(-7 + t, 4) → C₁'(7 - t, 4)\)</span></p>
+<p><span class="math notranslate nohighlight">\(D₁(-9 + t, 4) → D₁'(9 - t, 4)\)</span></p>
+</section>
+<section id="hubungan-transformasi">
+<h2>Hubungan Transformasi<a class="headerlink" href="#hubungan-transformasi" title="Link to this heading">#</a></h2>
+<p>Transformasi yang terjadi:
+<span class="math notranslate nohighlight">\((x, y) → (x + t, y) → (-(x + t), y)\)</span></p>
+<p>Setiap titik hasil refleksi selalu memiliki jarak yang sama terhadap sumbu Y dengan titik hasil translasi, tetapi berada di sisi yang berlawanan.</p>
+<section id="kesimpulan">
+<h3>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h3>
+<p>Refleksi terhadap sumbu Y mengubah tanda koordinat x, sedangkan translasi menggeser posisi titik tanpa mengubah bentuk. Kombinasi keduanya menghasilkan bangun yang tetap simetris terhadap sumbu Y dan bergerak secara berlawanan arah antara bangun asli dan bayangannya.</p>
+</section>
+</section>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -439,9 +527,16 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titik-awal">Titik Awal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-refleksi-terhadap-sumbu-y">Matriks Refleksi terhadap Sumbu Y</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#translasi">Translasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-setelah-translasi">Refleksi Setelah Translasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hubungan-transformasi">Hubungan Transformasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>
