@@ -2,7 +2,6 @@
 
 ## Link Colab: https://colab.research.google.com/drive/19dSR8vfdpJyLeMNq5xO0qEy9t3diKiQS?usp=sharing
 
-
 ## Hasil Output Program
 
 Pada program:
@@ -29,7 +28,7 @@ Tujuan utama SVD pada citra adalah:
 
 ---
 
-# 1. Menentukan Matriks Awal Gambar A
+## 1. Menentukan Matriks Awal Gambar A
 
 Saat gambar dibaca:
 
@@ -52,7 +51,7 @@ Kemudian dilakukan konversi grayscale:
 gambar_gray = np.mean(gambar[:, :, :3], axis=2)
 ```
 
-## Penjelasan
+### Penjelasan
 
 Proses grayscale dilakukan agar:
 
@@ -111,7 +110,7 @@ Setiap angka menunjukkan tingkat terang suatu piksel.
 
 ---
 
-# 2. Tujuan Dilakukan SVD
+## 2. Tujuan Dilakukan SVD
 
 Metode SVD memecah matriks gambar:
 
@@ -121,7 +120,7 @@ A = U\Sigma V^T
 
 menjadi tiga bagian utama.
 
-## Penjelasan Komponen
+### Penjelasan Komponen
 
 | Matriks | Fungsi |
 |---|---|
@@ -143,7 +142,7 @@ Dengan memecah gambar menjadi bagian-bagian ini, sistem dapat mengetahui:
 
 ---
 
-# 3. Mencari Matriks AAᵀ
+## 3. Mencari Matriks AAᵀ
 
 Langkah pertama dalam proses SVD adalah menghitung:
 
@@ -157,7 +156,7 @@ Pada program:
 AAT = gambar_asli @ gambar_asli.T
 ```
 
-## Penjelasan
+### Penjelasan
 
 Transpose `(T)` berarti:
 
@@ -182,7 +181,7 @@ hasil:
 AAᵀ = (250 × 250)
 ```
 
-## Mengapa Harus Menghitung AAᵀ?
+### Mengapa Harus Menghitung AAᵀ?
 
 Karena:
 
@@ -197,7 +196,7 @@ AAᵀ dipakai untuk mengetahui:
 
 ---
 
-# 4. Mencari Eigenvalue dan Eigenvector
+## 4. Mencari Eigenvalue dan Eigenvector
 
 Setelah mendapatkan AAᵀ, langkah berikutnya adalah mencari:
 
@@ -222,7 +221,7 @@ Pada Python:
 eigenvalue, eigenvector = np.linalg.eig(AAT)
 ```
 
-## Penjelasan Eigenvalue
+### Penjelasan Eigenvalue
 
 Eigenvalue menunjukkan:
 
@@ -236,7 +235,7 @@ Nilai kecil:
 
 - fitur kurang penting/noise.
 
-## Penjelasan Eigenvector
+### Penjelasan Eigenvector
 
 Eigenvector menunjukkan:
 
@@ -251,7 +250,7 @@ Misalnya:
 
 ---
 
-# 5. Mendapatkan Singular Value
+## 5. Mendapatkan Singular Value
 
 Singular value diperoleh dari akar eigenvalue:
 
@@ -277,7 +276,7 @@ Artinya:
 Terdapat 250 singular value
 ```
 
-## Penjelasan Singular Value
+### Penjelasan Singular Value
 
 Singular value adalah:
 
@@ -297,7 +296,7 @@ Karena itu:
 
 ---
 
-# 6. Membentuk Matriks U
+## 6. Membentuk Matriks U
 
 Eigenvector dari:
 
@@ -317,7 +316,7 @@ Ukurannya:
 U = (250 × 250)
 ```
 
-## Penjelasan Matriks U
+### Penjelasan Matriks U
 
 Matriks U berisi:
 
@@ -332,7 +331,7 @@ maka jumlah vektor pada U juga 250.
 
 ---
 
-# 7. Mencari Matriks AᵀA
+## 7. Mencari Matriks AᵀA
 
 Langkah berikutnya:
 
@@ -346,7 +345,7 @@ Secara matematis:
 A^TA
 ```
 
-## Penjelasan
+### Penjelasan
 
 AᵀA digunakan untuk:
 
@@ -373,7 +372,7 @@ AᵀA = (386 × 386)
 
 ---
 
-# 8. Membentuk Matriks Vᵀ
+## 8. Membentuk Matriks Vᵀ
 
 Eigenvector dari:
 
@@ -399,7 +398,7 @@ Sehingga:
 Vᵀ = (250 × 386)
 ```
 
-## Penjelasan Matriks Vᵀ
+### Penjelasan Matriks Vᵀ
 
 Vᵀ menyimpan:
 
@@ -438,7 +437,7 @@ Tujuannya agar:
 
 ---
 
-# 9. Membentuk Matriks Sigma Σ
+## 9. Membentuk Matriks Sigma Σ
 
 Vector singular:
 
@@ -463,7 +462,7 @@ Menjadi:
 \end{bmatrix}
 ```
 
-## Penjelasan Sigma
+### Penjelasan Sigma
 
 Sigma menunjukkan:
 
@@ -480,7 +479,7 @@ Karena hanya diagonal yang berisi angka:
 
 ---
 
-# 10. Rekonstruksi Gambar
+## 10. Rekonstruksi Gambar
 
 Pada program:
 
@@ -494,7 +493,7 @@ Secara matematis:
 A_k = U_k\Sigma_kV_k^T
 ```
 
-## Penjelasan
+### Penjelasan
 
 Rekonstruksi berarti:
 
@@ -512,7 +511,7 @@ Karena itu:
 
 ---
 
-# 11. Penjelasan Nilai k
+## 11. Penjelasan Nilai k
 
 Pada program:
 
@@ -520,7 +519,7 @@ Pada program:
 pilihan_k = [2, 10, 30, 60, 90]
 ```
 
-## Penjelasan
+### Penjelasan
 
 k menunjukkan:
 
@@ -541,7 +540,7 @@ Semakin besar k:
 
 ---
 
-# 12. Mengapa Gambar Tetap Mirip Setelah Dikompresi?
+## 12. Mengapa Gambar Tetap Mirip Setelah Dikompresi?
 
 Karena singular value terbesar menyimpan sebagian besar informasi gambar.
 
@@ -567,9 +566,9 @@ Komponen akhir:
 
 ---
 
-# 13. Alur Lengkap Proses SVD pada Program
+## 13. Alur Lengkap Proses SVD pada Program
 
-## STEP 1
+### STEP 1
 Baca gambar grayscale
 
 ```text
@@ -578,7 +577,7 @@ A (250 × 386)
 
 ↓
 
-## STEP 2
+### STEP 2
 Hitung:
 
 ```math
@@ -589,7 +588,7 @@ untuk mencari pola vertikal.
 
 ↓
 
-## STEP 3
+### STEP 3
 Cari:
 
 - eigenvalue
@@ -597,7 +596,7 @@ Cari:
 
 ↓
 
-## STEP 4
+### STEP 4
 Bentuk:
 
 ```text
@@ -606,7 +605,7 @@ U (250 × 250)
 
 ↓
 
-## STEP 5
+### STEP 5
 Hitung:
 
 ```math
@@ -617,12 +616,12 @@ untuk mencari pola horizontal.
 
 ↓
 
-## STEP 6
+### STEP 6
 Cari eigenvector
 
 ↓
 
-## STEP 7
+### STEP 7
 Bentuk:
 
 ```text
@@ -631,7 +630,7 @@ Vᵀ (250 × 386)
 
 ↓
 
-## STEP 8
+### STEP 8
 Hitung singular value:
 
 ```math
@@ -640,7 +639,7 @@ Hitung singular value:
 
 ↓
 
-## STEP 9
+### STEP 9
 Bentuk:
 
 ```text
@@ -649,7 +648,7 @@ Bentuk:
 
 ↓
 
-## STEP 10
+### STEP 10
 Rekonstruksi:
 
 ```math

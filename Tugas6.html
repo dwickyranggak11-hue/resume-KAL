@@ -180,19 +180,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas4.html">Transformasi Geometri Sumbu Y</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas5.html">Eigen Value dan Eigen Vector</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementasi Singular Value Decomposition (SVD) pada Kompresi Citra</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
 </ul>
 
     </div>
@@ -388,73 +375,69 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementasi Singular Value Decomposition (SVD) pada Kompresi Citra</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-colab-https-colab-research-google-com-drive-19dsr8vfdpjylemnq5xo0qey9t3dikiqs-usp-sharing">Link Colab: https://colab.research.google.com/drive/19dSR8vfdpJyLeMNq5xO0qEy9t3diKiQS?usp=sharing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-output-program">Hasil Output Program</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-matriks-awal-gambar-a">1. Menentukan Matriks Awal Gambar A</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-matriks-awal-gambar-a">1. Menentukan Matriks Awal Gambar A</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-dilakukan-svd">2. Tujuan Dilakukan SVD</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-komponen">Penjelasan Komponen</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-dilakukan-svd">2. Tujuan Dilakukan SVD</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-komponen">Penjelasan Komponen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-aa">3. Mencari Matriks AAᵀ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Penjelasan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-harus-menghitung-aa">Mengapa Harus Menghitung AAᵀ?</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-aa">3. Mencari Matriks AAᵀ</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Penjelasan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-harus-menghitung-aa">Mengapa Harus Menghitung AAᵀ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalue-dan-eigenvector">4. Mencari Eigenvalue dan Eigenvector</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-eigenvalue">Penjelasan Eigenvalue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-eigenvector">Penjelasan Eigenvector</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalue-dan-eigenvector">4. Mencari Eigenvalue dan Eigenvector</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-eigenvalue">Penjelasan Eigenvalue</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-eigenvector">Penjelasan Eigenvector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mendapatkan-singular-value">5. Mendapatkan Singular Value</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-singular-value">Penjelasan Singular Value</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mendapatkan-singular-value">5. Mendapatkan Singular Value</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-singular-value">Penjelasan Singular Value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-u">6. Membentuk Matriks U</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-matriks-u">Penjelasan Matriks U</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-u">6. Membentuk Matriks U</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-matriks-u">Penjelasan Matriks U</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-a-a">7. Mencari Matriks AᵀA</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Penjelasan</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-a-a">7. Mencari Matriks AᵀA</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Penjelasan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-v">8. Membentuk Matriks Vᵀ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-matriks-v">Penjelasan Matriks Vᵀ</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-v">8. Membentuk Matriks Vᵀ</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-matriks-v">Penjelasan Matriks Vᵀ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-sigma">9. Membentuk Matriks Sigma Σ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-sigma">Penjelasan Sigma</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-sigma">9. Membentuk Matriks Sigma Σ</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-sigma">Penjelasan Sigma</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekonstruksi-gambar">10. Rekonstruksi Gambar</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Penjelasan</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rekonstruksi-gambar">10. Rekonstruksi Gambar</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Penjelasan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-nilai-k">11. Penjelasan Nilai k</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Penjelasan</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-nilai-k">11. Penjelasan Nilai k</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Penjelasan</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-gambar-tetap-mirip-setelah-dikompresi">12. Mengapa Gambar Tetap Mirip Setelah Dikompresi?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alur-lengkap-proses-svd-pada-program">13. Alur Lengkap Proses SVD pada Program</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">STEP 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">STEP 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">STEP 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">STEP 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5">STEP 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6">STEP 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7">STEP 7</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8">STEP 8</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9">STEP 9</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10">STEP 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-gambar-tetap-mirip-setelah-dikompresi">12. Mengapa Gambar Tetap Mirip Setelah Dikompresi?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alur-lengkap-proses-svd-pada-program">13. Alur Lengkap Proses SVD pada Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">STEP 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">STEP 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">STEP 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">STEP 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5">STEP 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6">STEP 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7">STEP 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8">STEP 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9">STEP 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10">STEP 10</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -490,10 +473,9 @@ Ukuran Matriks Vt : (250, 386)
 <li><p>mempertahankan kualitas visual gambar.</p></li>
 </ul>
 </section>
-</section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="menentukan-matriks-awal-gambar-a">
-<h1>1. Menentukan Matriks Awal Gambar A<a class="headerlink" href="#menentukan-matriks-awal-gambar-a" title="Link to this heading">#</a></h1>
+<section id="menentukan-matriks-awal-gambar-a">
+<h2>1. Menentukan Matriks Awal Gambar A<a class="headerlink" href="#menentukan-matriks-awal-gambar-a" title="Link to this heading">#</a></h2>
 <p>Saat gambar dibaca:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gambar</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">nama_file</span><span class="p">)</span>
 </pre></div>
@@ -509,7 +491,7 @@ Tinggi = 250 piksel
 </pre></div>
 </div>
 <section id="penjelasan">
-<h2>Penjelasan<a class="headerlink" href="#penjelasan" title="Link to this heading">#</a></h2>
+<h3>Penjelasan<a class="headerlink" href="#penjelasan" title="Link to this heading">#</a></h3>
 <p>Proses grayscale dilakukan agar:</p>
 <ul class="simple">
 <li><p>gambar hanya memiliki 1 kanal warna,</p></li>
@@ -554,15 +536,15 @@ Tinggi = 250 piksel
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="tujuan-dilakukan-svd">
-<h1>2. Tujuan Dilakukan SVD<a class="headerlink" href="#tujuan-dilakukan-svd" title="Link to this heading">#</a></h1>
+<section id="tujuan-dilakukan-svd">
+<h2>2. Tujuan Dilakukan SVD<a class="headerlink" href="#tujuan-dilakukan-svd" title="Link to this heading">#</a></h2>
 <p>Metode SVD memecah matriks gambar:</p>
 <div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A = U\Sigma V^T
 </pre></div>
 </div>
 <p>menjadi tiga bagian utama.</p>
 <section id="penjelasan-komponen">
-<h2>Penjelasan Komponen<a class="headerlink" href="#penjelasan-komponen" title="Link to this heading">#</a></h2>
+<h3>Penjelasan Komponen<a class="headerlink" href="#penjelasan-komponen" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Matriks</p></th>
@@ -597,8 +579,8 @@ Tinggi = 250 piksel
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="mencari-matriks-aa">
-<h1>3. Mencari Matriks AAᵀ<a class="headerlink" href="#mencari-matriks-aa" title="Link to this heading">#</a></h1>
+<section id="mencari-matriks-aa">
+<h2>3. Mencari Matriks AAᵀ<a class="headerlink" href="#mencari-matriks-aa" title="Link to this heading">#</a></h2>
 <p>Langkah pertama dalam proses SVD adalah menghitung:</p>
 <div class="highlight-math notranslate"><div class="highlight"><pre><span></span>AA^T
 </pre></div>
@@ -608,7 +590,7 @@ Tinggi = 250 piksel
 </pre></div>
 </div>
 <section id="id1">
-<h2>Penjelasan<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h3>Penjelasan<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>Transpose <code class="docutils literal notranslate"><span class="pre">(T)</span></code> berarti:</p>
 <ul class="simple">
 <li><p>baris menjadi kolom,</p></li>
@@ -628,7 +610,7 @@ Tinggi = 250 piksel
 </div>
 </section>
 <section id="mengapa-harus-menghitung-aa">
-<h2>Mengapa Harus Menghitung AAᵀ?<a class="headerlink" href="#mengapa-harus-menghitung-aa" title="Link to this heading">#</a></h2>
+<h3>Mengapa Harus Menghitung AAᵀ?<a class="headerlink" href="#mengapa-harus-menghitung-aa" title="Link to this heading">#</a></h3>
 <p>Karena:</p>
 <ul class="simple">
 <li><p>eigenvector dari AAᵀ digunakan membentuk matriks U,</p></li>
@@ -643,8 +625,8 @@ Tinggi = 250 piksel
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="mencari-eigenvalue-dan-eigenvector">
-<h1>4. Mencari Eigenvalue dan Eigenvector<a class="headerlink" href="#mencari-eigenvalue-dan-eigenvector" title="Link to this heading">#</a></h1>
+<section id="mencari-eigenvalue-dan-eigenvector">
+<h2>4. Mencari Eigenvalue dan Eigenvector<a class="headerlink" href="#mencari-eigenvalue-dan-eigenvector" title="Link to this heading">#</a></h2>
 <p>Setelah mendapatkan AAᵀ, langkah berikutnya adalah mencari:</p>
 <ul class="simple">
 <li><p>eigenvalue</p></li>
@@ -665,7 +647,7 @@ Tinggi = 250 piksel
 </pre></div>
 </div>
 <section id="penjelasan-eigenvalue">
-<h2>Penjelasan Eigenvalue<a class="headerlink" href="#penjelasan-eigenvalue" title="Link to this heading">#</a></h2>
+<h3>Penjelasan Eigenvalue<a class="headerlink" href="#penjelasan-eigenvalue" title="Link to this heading">#</a></h3>
 <p>Eigenvalue menunjukkan:</p>
 <ul class="simple">
 <li><p>seberapa besar pengaruh suatu fitur pada gambar.</p></li>
@@ -680,7 +662,7 @@ Tinggi = 250 piksel
 </ul>
 </section>
 <section id="penjelasan-eigenvector">
-<h2>Penjelasan Eigenvector<a class="headerlink" href="#penjelasan-eigenvector" title="Link to this heading">#</a></h2>
+<h3>Penjelasan Eigenvector<a class="headerlink" href="#penjelasan-eigenvector" title="Link to this heading">#</a></h3>
 <p>Eigenvector menunjukkan:</p>
 <ul class="simple">
 <li><p>arah pola utama pada gambar.</p></li>
@@ -695,8 +677,8 @@ Tinggi = 250 piksel
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="mendapatkan-singular-value">
-<h1>5. Mendapatkan Singular Value<a class="headerlink" href="#mendapatkan-singular-value" title="Link to this heading">#</a></h1>
+<section id="mendapatkan-singular-value">
+<h2>5. Mendapatkan Singular Value<a class="headerlink" href="#mendapatkan-singular-value" title="Link to this heading">#</a></h2>
 <p>Singular value diperoleh dari akar eigenvalue:</p>
 <div class="highlight-math notranslate"><div class="highlight"><pre><span></span>\sigma_i = \sqrt{\lambda_i}
 </pre></div>
@@ -714,7 +696,7 @@ Tinggi = 250 piksel
 </pre></div>
 </div>
 <section id="penjelasan-singular-value">
-<h2>Penjelasan Singular Value<a class="headerlink" href="#penjelasan-singular-value" title="Link to this heading">#</a></h2>
+<h3>Penjelasan Singular Value<a class="headerlink" href="#penjelasan-singular-value" title="Link to this heading">#</a></h3>
 <p>Singular value adalah:</p>
 <ul class="simple">
 <li><p>ukuran kekuatan informasi suatu komponen gambar.</p></li>
@@ -734,8 +716,8 @@ Tinggi = 250 piksel
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="membentuk-matriks-u">
-<h1>6. Membentuk Matriks U<a class="headerlink" href="#membentuk-matriks-u" title="Link to this heading">#</a></h1>
+<section id="membentuk-matriks-u">
+<h2>6. Membentuk Matriks U<a class="headerlink" href="#membentuk-matriks-u" title="Link to this heading">#</a></h2>
 <p>Eigenvector dari:</p>
 <div class="highlight-math notranslate"><div class="highlight"><pre><span></span>AA^T
 </pre></div>
@@ -749,7 +731,7 @@ Tinggi = 250 piksel
 </pre></div>
 </div>
 <section id="penjelasan-matriks-u">
-<h2>Penjelasan Matriks U<a class="headerlink" href="#penjelasan-matriks-u" title="Link to this heading">#</a></h2>
+<h3>Penjelasan Matriks U<a class="headerlink" href="#penjelasan-matriks-u" title="Link to this heading">#</a></h3>
 <p>Matriks U berisi:</p>
 <ul class="simple">
 <li><p>pola vertikal utama gambar.</p></li>
@@ -763,8 +745,8 @@ maka jumlah vektor pada U juga 250.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="mencari-matriks-a-a">
-<h1>7. Mencari Matriks AᵀA<a class="headerlink" href="#mencari-matriks-a-a" title="Link to this heading">#</a></h1>
+<section id="mencari-matriks-a-a">
+<h2>7. Mencari Matriks AᵀA<a class="headerlink" href="#mencari-matriks-a-a" title="Link to this heading">#</a></h2>
 <p>Langkah berikutnya:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ATA</span> <span class="o">=</span> <span class="n">gambar_asli</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">gambar_asli</span>
 </pre></div>
@@ -774,7 +756,7 @@ maka jumlah vektor pada U juga 250.</p>
 </pre></div>
 </div>
 <section id="id2">
-<h2>Penjelasan<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h3>Penjelasan<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>AᵀA digunakan untuk:</p>
 <ul class="simple">
 <li><p>mencari pola horizontal gambar.</p></li>
@@ -795,8 +777,8 @@ A  = (250 × 386)
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="membentuk-matriks-v">
-<h1>8. Membentuk Matriks Vᵀ<a class="headerlink" href="#membentuk-matriks-v" title="Link to this heading">#</a></h1>
+<section id="membentuk-matriks-v">
+<h2>8. Membentuk Matriks Vᵀ<a class="headerlink" href="#membentuk-matriks-v" title="Link to this heading">#</a></h2>
 <p>Eigenvector dari:</p>
 <div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A^TA
 </pre></div>
@@ -814,7 +796,7 @@ A  = (250 × 386)
 </pre></div>
 </div>
 <section id="penjelasan-matriks-v">
-<h2>Penjelasan Matriks Vᵀ<a class="headerlink" href="#penjelasan-matriks-v" title="Link to this heading">#</a></h2>
+<h3>Penjelasan Matriks Vᵀ<a class="headerlink" href="#penjelasan-matriks-v" title="Link to this heading">#</a></h3>
 <p>Vᵀ menyimpan:</p>
 <ul class="simple">
 <li><p>pola horizontal gambar.</p></li>
@@ -847,8 +829,8 @@ maka Vᵀ membaca:</p>
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="membentuk-matriks-sigma">
-<h1>9. Membentuk Matriks Sigma Σ<a class="headerlink" href="#membentuk-matriks-sigma" title="Link to this heading">#</a></h1>
+<section id="membentuk-matriks-sigma">
+<h2>9. Membentuk Matriks Sigma Σ<a class="headerlink" href="#membentuk-matriks-sigma" title="Link to this heading">#</a></h2>
 <p>Vector singular:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>S = [σ₁, σ₂, σ₃, ..., σ₂₅₀]
 </pre></div>
@@ -867,7 +849,7 @@ maka Vᵀ membaca:</p>
 </pre></div>
 </div>
 <section id="penjelasan-sigma">
-<h2>Penjelasan Sigma<a class="headerlink" href="#penjelasan-sigma" title="Link to this heading">#</a></h2>
+<h3>Penjelasan Sigma<a class="headerlink" href="#penjelasan-sigma" title="Link to this heading">#</a></h3>
 <p>Sigma menunjukkan:</p>
 <ul class="simple">
 <li><p>tingkat kepentingan tiap fitur gambar.</p></li>
@@ -884,8 +866,8 @@ maka Vᵀ membaca:</p>
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="rekonstruksi-gambar">
-<h1>10. Rekonstruksi Gambar<a class="headerlink" href="#rekonstruksi-gambar" title="Link to this heading">#</a></h1>
+<section id="rekonstruksi-gambar">
+<h2>10. Rekonstruksi Gambar<a class="headerlink" href="#rekonstruksi-gambar" title="Link to this heading">#</a></h2>
 <p>Pada program:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gambar_rekonstruksi</span> <span class="o">=</span> <span class="n">U_k</span> <span class="o">@</span> <span class="n">S_k</span> <span class="o">@</span> <span class="n">Vt_k</span>
 </pre></div>
@@ -895,7 +877,7 @@ maka Vᵀ membaca:</p>
 </pre></div>
 </div>
 <section id="id3">
-<h2>Penjelasan<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<h3>Penjelasan<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>Rekonstruksi berarti:</p>
 <ul class="simple">
 <li><p>membangun kembali gambar dari hasil SVD.</p></li>
@@ -913,14 +895,14 @@ maka Vᵀ membaca:</p>
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="penjelasan-nilai-k">
-<h1>11. Penjelasan Nilai k<a class="headerlink" href="#penjelasan-nilai-k" title="Link to this heading">#</a></h1>
+<section id="penjelasan-nilai-k">
+<h2>11. Penjelasan Nilai k<a class="headerlink" href="#penjelasan-nilai-k" title="Link to this heading">#</a></h2>
 <p>Pada program:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pilihan_k</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
 </pre></div>
 </div>
 <section id="id4">
-<h2>Penjelasan<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<h3>Penjelasan<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>k menunjukkan:</p>
 <ul class="simple">
 <li><p>jumlah singular value yang dipakai.</p></li>
@@ -958,8 +940,8 @@ maka Vᵀ membaca:</p>
 </section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="mengapa-gambar-tetap-mirip-setelah-dikompresi">
-<h1>12. Mengapa Gambar Tetap Mirip Setelah Dikompresi?<a class="headerlink" href="#mengapa-gambar-tetap-mirip-setelah-dikompresi" title="Link to this heading">#</a></h1>
+<section id="mengapa-gambar-tetap-mirip-setelah-dikompresi">
+<h2>12. Mengapa Gambar Tetap Mirip Setelah Dikompresi?<a class="headerlink" href="#mengapa-gambar-tetap-mirip-setelah-dikompresi" title="Link to this heading">#</a></h2>
 <p>Karena singular value terbesar menyimpan sebagian besar informasi gambar.</p>
 <p>Pada grafik:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
@@ -981,10 +963,10 @@ maka Vᵀ membaca:</p>
 </ul>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="alur-lengkap-proses-svd-pada-program">
-<h1>13. Alur Lengkap Proses SVD pada Program<a class="headerlink" href="#alur-lengkap-proses-svd-pada-program" title="Link to this heading">#</a></h1>
+<section id="alur-lengkap-proses-svd-pada-program">
+<h2>13. Alur Lengkap Proses SVD pada Program<a class="headerlink" href="#alur-lengkap-proses-svd-pada-program" title="Link to this heading">#</a></h2>
 <section id="step-1">
-<h2>STEP 1<a class="headerlink" href="#step-1" title="Link to this heading">#</a></h2>
+<h3>STEP 1<a class="headerlink" href="#step-1" title="Link to this heading">#</a></h3>
 <p>Baca gambar grayscale</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A (250 × 386)
 </pre></div>
@@ -992,7 +974,7 @@ maka Vᵀ membaca:</p>
 <p>↓</p>
 </section>
 <section id="step-2">
-<h2>STEP 2<a class="headerlink" href="#step-2" title="Link to this heading">#</a></h2>
+<h3>STEP 2<a class="headerlink" href="#step-2" title="Link to this heading">#</a></h3>
 <p>Hitung:</p>
 <div class="highlight-math notranslate"><div class="highlight"><pre><span></span>AA^T
 </pre></div>
@@ -1001,7 +983,7 @@ maka Vᵀ membaca:</p>
 <p>↓</p>
 </section>
 <section id="step-3">
-<h2>STEP 3<a class="headerlink" href="#step-3" title="Link to this heading">#</a></h2>
+<h3>STEP 3<a class="headerlink" href="#step-3" title="Link to this heading">#</a></h3>
 <p>Cari:</p>
 <ul class="simple">
 <li><p>eigenvalue</p></li>
@@ -1010,7 +992,7 @@ maka Vᵀ membaca:</p>
 <p>↓</p>
 </section>
 <section id="step-4">
-<h2>STEP 4<a class="headerlink" href="#step-4" title="Link to this heading">#</a></h2>
+<h3>STEP 4<a class="headerlink" href="#step-4" title="Link to this heading">#</a></h3>
 <p>Bentuk:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>U (250 × 250)
 </pre></div>
@@ -1018,7 +1000,7 @@ maka Vᵀ membaca:</p>
 <p>↓</p>
 </section>
 <section id="step-5">
-<h2>STEP 5<a class="headerlink" href="#step-5" title="Link to this heading">#</a></h2>
+<h3>STEP 5<a class="headerlink" href="#step-5" title="Link to this heading">#</a></h3>
 <p>Hitung:</p>
 <div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A^TA
 </pre></div>
@@ -1027,12 +1009,12 @@ maka Vᵀ membaca:</p>
 <p>↓</p>
 </section>
 <section id="step-6">
-<h2>STEP 6<a class="headerlink" href="#step-6" title="Link to this heading">#</a></h2>
+<h3>STEP 6<a class="headerlink" href="#step-6" title="Link to this heading">#</a></h3>
 <p>Cari eigenvector</p>
 <p>↓</p>
 </section>
 <section id="step-7">
-<h2>STEP 7<a class="headerlink" href="#step-7" title="Link to this heading">#</a></h2>
+<h3>STEP 7<a class="headerlink" href="#step-7" title="Link to this heading">#</a></h3>
 <p>Bentuk:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Vᵀ (250 × 386)
 </pre></div>
@@ -1040,7 +1022,7 @@ maka Vᵀ membaca:</p>
 <p>↓</p>
 </section>
 <section id="step-8">
-<h2>STEP 8<a class="headerlink" href="#step-8" title="Link to this heading">#</a></h2>
+<h3>STEP 8<a class="headerlink" href="#step-8" title="Link to this heading">#</a></h3>
 <p>Hitung singular value:</p>
 <div class="highlight-math notranslate"><div class="highlight"><pre><span></span>\sigma_i = \sqrt{\lambda_i}
 </pre></div>
@@ -1048,7 +1030,7 @@ maka Vᵀ membaca:</p>
 <p>↓</p>
 </section>
 <section id="step-9">
-<h2>STEP 9<a class="headerlink" href="#step-9" title="Link to this heading">#</a></h2>
+<h3>STEP 9<a class="headerlink" href="#step-9" title="Link to this heading">#</a></h3>
 <p>Bentuk:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Σ (250 × 250)
 </pre></div>
@@ -1056,12 +1038,13 @@ maka Vᵀ membaca:</p>
 <p>↓</p>
 </section>
 <section id="step-10">
-<h2>STEP 10<a class="headerlink" href="#step-10" title="Link to this heading">#</a></h2>
+<h3>STEP 10<a class="headerlink" href="#step-10" title="Link to this heading">#</a></h3>
 <p>Rekonstruksi:</p>
 <div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A = U\Sigma V^T
 </pre></div>
 </div>
 <p>untuk menghasilkan kembali gambar hasil kompresi.</p>
+</section>
 </section>
 </section>
 
@@ -1120,73 +1103,69 @@ maka Vᵀ membaca:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementasi Singular Value Decomposition (SVD) pada Kompresi Citra</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-colab-https-colab-research-google-com-drive-19dsr8vfdpjylemnq5xo0qey9t3dikiqs-usp-sharing">Link Colab: https://colab.research.google.com/drive/19dSR8vfdpJyLeMNq5xO0qEy9t3diKiQS?usp=sharing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-output-program">Hasil Output Program</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-matriks-awal-gambar-a">1. Menentukan Matriks Awal Gambar A</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-matriks-awal-gambar-a">1. Menentukan Matriks Awal Gambar A</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-dilakukan-svd">2. Tujuan Dilakukan SVD</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-komponen">Penjelasan Komponen</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-dilakukan-svd">2. Tujuan Dilakukan SVD</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-komponen">Penjelasan Komponen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-aa">3. Mencari Matriks AAᵀ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Penjelasan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-harus-menghitung-aa">Mengapa Harus Menghitung AAᵀ?</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-aa">3. Mencari Matriks AAᵀ</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Penjelasan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-harus-menghitung-aa">Mengapa Harus Menghitung AAᵀ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalue-dan-eigenvector">4. Mencari Eigenvalue dan Eigenvector</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-eigenvalue">Penjelasan Eigenvalue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-eigenvector">Penjelasan Eigenvector</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalue-dan-eigenvector">4. Mencari Eigenvalue dan Eigenvector</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-eigenvalue">Penjelasan Eigenvalue</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-eigenvector">Penjelasan Eigenvector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mendapatkan-singular-value">5. Mendapatkan Singular Value</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-singular-value">Penjelasan Singular Value</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mendapatkan-singular-value">5. Mendapatkan Singular Value</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-singular-value">Penjelasan Singular Value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-u">6. Membentuk Matriks U</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-matriks-u">Penjelasan Matriks U</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-u">6. Membentuk Matriks U</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-matriks-u">Penjelasan Matriks U</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-a-a">7. Mencari Matriks AᵀA</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Penjelasan</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-a-a">7. Mencari Matriks AᵀA</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Penjelasan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-v">8. Membentuk Matriks Vᵀ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-matriks-v">Penjelasan Matriks Vᵀ</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-v">8. Membentuk Matriks Vᵀ</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-matriks-v">Penjelasan Matriks Vᵀ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-sigma">9. Membentuk Matriks Sigma Σ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-sigma">Penjelasan Sigma</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-matriks-sigma">9. Membentuk Matriks Sigma Σ</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-sigma">Penjelasan Sigma</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekonstruksi-gambar">10. Rekonstruksi Gambar</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Penjelasan</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rekonstruksi-gambar">10. Rekonstruksi Gambar</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Penjelasan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-nilai-k">11. Penjelasan Nilai k</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Penjelasan</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-nilai-k">11. Penjelasan Nilai k</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Penjelasan</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-gambar-tetap-mirip-setelah-dikompresi">12. Mengapa Gambar Tetap Mirip Setelah Dikompresi?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alur-lengkap-proses-svd-pada-program">13. Alur Lengkap Proses SVD pada Program</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">STEP 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">STEP 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">STEP 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">STEP 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5">STEP 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6">STEP 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7">STEP 7</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8">STEP 8</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9">STEP 9</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10">STEP 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-gambar-tetap-mirip-setelah-dikompresi">12. Mengapa Gambar Tetap Mirip Setelah Dikompresi?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alur-lengkap-proses-svd-pada-program">13. Alur Lengkap Proses SVD pada Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">STEP 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">STEP 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">STEP 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">STEP 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5">STEP 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6">STEP 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7">STEP 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8">STEP 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9">STEP 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10">STEP 10</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
