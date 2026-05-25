@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas6';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -509,19 +511,19 @@ Tinggi = 250 piksel
 </pre></div>
 </div>
 <p>maka matriks gambar:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A_{250 \times 386}
-</pre></div>
-</div>
-<p>Artinya:</p>
+<p><span class="math notranslate nohighlight">\(
+A_{250 \times 386}
+\)</span>
+Artinya:</p>
 <ul class="simple">
 <li><p>250 baris piksel</p></li>
 <li><p>386 kolom piksel</p></li>
 </ul>
 <p>Jumlah total piksel:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>250 \times 386 = 96500
-</pre></div>
-</div>
-<p>Jadi gambar direpresentasikan sebagai:</p>
+<p><span class="math notranslate nohighlight">\(
+250 \times 386 = 96500
+\)</span>
+Jadi gambar direpresentasikan sebagai:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>96.500 nilai intensitas piksel grayscale
 </pre></div>
 </div>
@@ -539,9 +541,9 @@ Tinggi = 250 piksel
 <section id="tujuan-dilakukan-svd">
 <h2>2. Tujuan Dilakukan SVD<a class="headerlink" href="#tujuan-dilakukan-svd" title="Link to this heading">#</a></h2>
 <p>Metode SVD memecah matriks gambar:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A = U\Sigma V^T
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+A = U\Sigma V^T
+\)</span></p>
 <p>menjadi tiga bagian utama.</p>
 <section id="penjelasan-komponen">
 <h3>Penjelasan Komponen<a class="headerlink" href="#penjelasan-komponen" title="Link to this heading">#</a></h3>
@@ -582,9 +584,9 @@ Tinggi = 250 piksel
 <section id="mencari-matriks-aa">
 <h2>3. Mencari Matriks AAᵀ<a class="headerlink" href="#mencari-matriks-aa" title="Link to this heading">#</a></h2>
 <p>Langkah pertama dalam proses SVD adalah menghitung:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>AA^T
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+AA^T
+\)</span></p>
 <p>Pada program:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">AAT</span> <span class="o">=</span> <span class="n">gambar_asli</span> <span class="o">@</span> <span class="n">gambar_asli</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
@@ -601,13 +603,13 @@ Tinggi = 250 piksel
 </pre></div>
 </div>
 <p>maka:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>(250 \times 386)(386 \times 250) = 250 \times 250
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+(250 \times 386)(386 \times 250) = 250 \times 250
+\)</span></p>
 <p>hasil:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>AAᵀ = (250 × 250)
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+AAᵀ = (250 × 250)
+\)</span></p>
 </section>
 <section id="mengapa-harus-menghitung-aa">
 <h3>Mengapa Harus Menghitung AAᵀ?<a class="headerlink" href="#mengapa-harus-menghitung-aa" title="Link to this heading">#</a></h3>
@@ -633,9 +635,9 @@ Tinggi = 250 piksel
 <li><p>eigenvector</p></li>
 </ul>
 <p>Secara matematis:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>(AA^T - \lambda I)x = 0
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+(AA^T - \lambda I)x = 0
+\)</span></p>
 <p>dengan:</p>
 <ul class="simple">
 <li><p>λ = eigenvalue</p></li>
@@ -680,9 +682,9 @@ Tinggi = 250 piksel
 <section id="mendapatkan-singular-value">
 <h2>5. Mendapatkan Singular Value<a class="headerlink" href="#mendapatkan-singular-value" title="Link to this heading">#</a></h2>
 <p>Singular value diperoleh dari akar eigenvalue:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>\sigma_i = \sqrt{\lambda_i}
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+\sigma_i = \sqrt{\lambda_i}
+\)</span></p>
 <p>Pada program sebenarnya proses ini dihitung otomatis oleh:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">()</span>
 </pre></div>
@@ -719,13 +721,13 @@ Tinggi = 250 piksel
 <section id="membentuk-matriks-u">
 <h2>6. Membentuk Matriks U<a class="headerlink" href="#membentuk-matriks-u" title="Link to this heading">#</a></h2>
 <p>Eigenvector dari:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>AA^T
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+AA^T
+\)</span></p>
 <p>dikumpulkan menjadi:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>U = [u_1 \ u_2 \ u_3 \ ... \ u_{250}]
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+U = [u_1 \ u_2 \ u_3 \ ... \ u_{250}]
+\)</span></p>
 <p>Ukurannya:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>U = (250 × 250)
 </pre></div>
@@ -752,9 +754,9 @@ maka jumlah vektor pada U juga 250.</p>
 </pre></div>
 </div>
 <p>Secara matematis:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A^TA
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+A^TA
+\)</span></p>
 <section id="id2">
 <h3>Penjelasan<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>AᵀA digunakan untuk:</p>
@@ -767,9 +769,9 @@ A  = (250 × 386)
 </pre></div>
 </div>
 <p>maka:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>(386 \times 250)(250 \times 386) = 386 \times 386
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+(386 \times 250)(250 \times 386) = 386 \times 386
+\)</span></p>
 <p>hasil:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>AᵀA = (386 × 386)
 </pre></div>
@@ -780,17 +782,17 @@ A  = (250 × 386)
 <section id="membentuk-matriks-v">
 <h2>8. Membentuk Matriks Vᵀ<a class="headerlink" href="#membentuk-matriks-v" title="Link to this heading">#</a></h2>
 <p>Eigenvector dari:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A^TA
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+A^TA
+\)</span></p>
 <p>membentuk matriks:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>V
 </pre></div>
 </div>
 <p>kemudian ditranspose menjadi:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>V^T
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+V^T
+\)</span></p>
 <p>Sehingga:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Vᵀ = (250 × 386)
 </pre></div>
@@ -840,14 +842,14 @@ maka Vᵀ membaca:</p>
 </pre></div>
 </div>
 <p>Menjadi:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>\Sigma =
+<p><span class="math notranslate nohighlight">\(
+\Sigma =
 \begin{bmatrix}
 \sigma_1 &amp; 0 &amp; 0 \\
 0 &amp; \sigma_2 &amp; 0 \\
 0 &amp; 0 &amp; \sigma_3
 \end{bmatrix}
-</pre></div>
-</div>
+\)</span></p>
 <section id="penjelasan-sigma">
 <h3>Penjelasan Sigma<a class="headerlink" href="#penjelasan-sigma" title="Link to this heading">#</a></h3>
 <p>Sigma menunjukkan:</p>
@@ -873,9 +875,9 @@ maka Vᵀ membaca:</p>
 </pre></div>
 </div>
 <p>Secara matematis:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A_k = U_k\Sigma_kV_k^T
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+A_k = U_k\Sigma_kV_k^T
+\)</span></p>
 <section id="id3">
 <h3>Penjelasan<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>Rekonstruksi berarti:</p>
@@ -976,9 +978,9 @@ maka Vᵀ membaca:</p>
 <section id="step-2">
 <h3>STEP 2<a class="headerlink" href="#step-2" title="Link to this heading">#</a></h3>
 <p>Hitung:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>AA^T
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+AA^T
+\)</span></p>
 <p>untuk mencari pola vertikal.</p>
 <p>↓</p>
 </section>
@@ -1002,9 +1004,9 @@ maka Vᵀ membaca:</p>
 <section id="step-5">
 <h3>STEP 5<a class="headerlink" href="#step-5" title="Link to this heading">#</a></h3>
 <p>Hitung:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A^TA
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+A^TA
+\)</span></p>
 <p>untuk mencari pola horizontal.</p>
 <p>↓</p>
 </section>
@@ -1024,9 +1026,9 @@ maka Vᵀ membaca:</p>
 <section id="step-8">
 <h3>STEP 8<a class="headerlink" href="#step-8" title="Link to this heading">#</a></h3>
 <p>Hitung singular value:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>\sigma_i = \sqrt{\lambda_i}
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+\sigma_i = \sqrt{\lambda_i}
+\)</span></p>
 <p>↓</p>
 </section>
 <section id="step-9">
@@ -1040,9 +1042,9 @@ maka Vᵀ membaca:</p>
 <section id="step-10">
 <h3>STEP 10<a class="headerlink" href="#step-10" title="Link to this heading">#</a></h3>
 <p>Rekonstruksi:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>A = U\Sigma V^T
-</pre></div>
-</div>
+<p><span class="math notranslate nohighlight">\(
+A = U\Sigma V^T
+\)</span></p>
 <p>untuk menghasilkan kembali gambar hasil kompresi.</p>
 </section>
 </section>

@@ -76,10 +76,9 @@ Karena ukuran gambar:
 
 maka matriks gambar:
 
-```math
+$
 A_{250 \times 386}
-```
-
+$
 Artinya:
 
 - 250 baris piksel
@@ -87,10 +86,9 @@ Artinya:
 
 Jumlah total piksel:
 
-```math
+$
 250 \times 386 = 96500
-```
-
+$
 Jadi gambar direpresentasikan sebagai:
 
 ```text
@@ -114,9 +112,9 @@ Setiap angka menunjukkan tingkat terang suatu piksel.
 
 Metode SVD memecah matriks gambar:
 
-```math
+$
 A = U\Sigma V^T
-```
+$
 
 menjadi tiga bagian utama.
 
@@ -146,9 +144,9 @@ Dengan memecah gambar menjadi bagian-bagian ini, sistem dapat mengetahui:
 
 Langkah pertama dalam proses SVD adalah menghitung:
 
-```math
+$
 AA^T
-```
+$
 
 Pada program:
 
@@ -171,15 +169,15 @@ A = (250 × 386)
 
 maka:
 
-```math
+$
 (250 \times 386)(386 \times 250) = 250 \times 250
-```
+$
 
 hasil:
 
-```text
+$
 AAᵀ = (250 × 250)
-```
+$
 
 ### Mengapa Harus Menghitung AAᵀ?
 
@@ -205,9 +203,9 @@ Setelah mendapatkan AAᵀ, langkah berikutnya adalah mencari:
 
 Secara matematis:
 
-```math
+$
 (AA^T - \lambda I)x = 0
-```
+$
 
 dengan:
 
@@ -254,9 +252,9 @@ Misalnya:
 
 Singular value diperoleh dari akar eigenvalue:
 
-```math
+$
 \sigma_i = \sqrt{\lambda_i}
-```
+$
 
 Pada program sebenarnya proses ini dihitung otomatis oleh:
 
@@ -300,15 +298,15 @@ Karena itu:
 
 Eigenvector dari:
 
-```math
+$
 AA^T
-```
+$
 
 dikumpulkan menjadi:
 
-```math
+$
 U = [u_1 \ u_2 \ u_3 \ ... \ u_{250}]
-```
+$
 
 Ukurannya:
 
@@ -341,9 +339,9 @@ ATA = gambar_asli.T @ gambar_asli
 
 Secara matematis:
 
-```math
+$
 A^TA
-```
+$
 
 ### Penjelasan
 
@@ -360,9 +358,9 @@ A  = (250 × 386)
 
 maka:
 
-```math
+$
 (386 \times 250)(250 \times 386) = 386 \times 386
-```
+$
 
 hasil:
 
@@ -376,9 +374,9 @@ AᵀA = (386 × 386)
 
 Eigenvector dari:
 
-```math
+$
 A^TA
-```
+$
 
 membentuk matriks:
 
@@ -388,9 +386,9 @@ V
 
 kemudian ditranspose menjadi:
 
-```math
+$
 V^T
-```
+$
 
 Sehingga:
 
@@ -453,14 +451,14 @@ Sigma = np.diag(S)
 
 Menjadi:
 
-```math
+$
 \Sigma =
 \begin{bmatrix}
 \sigma_1 & 0 & 0 \\
 0 & \sigma_2 & 0 \\
 0 & 0 & \sigma_3
 \end{bmatrix}
-```
+$
 
 ### Penjelasan Sigma
 
@@ -489,9 +487,9 @@ gambar_rekonstruksi = U_k @ S_k @ Vt_k
 
 Secara matematis:
 
-```math
+$
 A_k = U_k\Sigma_kV_k^T
-```
+$
 
 ### Penjelasan
 
@@ -580,9 +578,9 @@ A (250 × 386)
 ### STEP 2
 Hitung:
 
-```math
+$
 AA^T
-```
+$
 
 untuk mencari pola vertikal.
 
@@ -608,9 +606,9 @@ U (250 × 250)
 ### STEP 5
 Hitung:
 
-```math
+$
 A^TA
-```
+$
 
 untuk mencari pola horizontal.
 
@@ -633,9 +631,9 @@ Vᵀ (250 × 386)
 ### STEP 8
 Hitung singular value:
 
-```math
+$
 \sigma_i = \sqrt{\lambda_i}
-```
+$
 
 ↓
 
@@ -651,8 +649,8 @@ Bentuk:
 ### STEP 10
 Rekonstruksi:
 
-```math
+$
 A = U\Sigma V^T
-```
+$
 
 untuk menghasilkan kembali gambar hasil kompresi.
