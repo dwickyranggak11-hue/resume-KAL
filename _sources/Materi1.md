@@ -1,4 +1,4 @@
-# Materi 1
+# Materi Sistem Persamaan Linear
 ## Pengertian Sistem Persamaan Linear
 Sistem persamaan linear bisa diartikan sebagai suatu persamaan aljabar. Dimana persamaan linear sendiri memiliki karakteristik pada setiap sukunya mengandung konstanta atau perkalian konstanta dengan variabel tunggal.
 
