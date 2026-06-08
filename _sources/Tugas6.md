@@ -1,5 +1,4 @@
-# Implementasi Singular Value Decomposition (SVD) pada Kompresi Citra
-
+# Implementasi Singular Value Decomposition (SVD) dan Face Recognition Eigenface
 ## Link Colab: https://colab.research.google.com/drive/19dSR8vfdpJyLeMNq5xO0qEy9t3diKiQS?usp=sharing
 
 ## Hasil Output Program
